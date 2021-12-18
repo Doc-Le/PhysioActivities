@@ -20,6 +20,8 @@
     {% endblock %}
 
     {% block extra_css %}
+    
+    <link rel="stylesheet" href="css/tooplate-style.css">
     {% endblock %}
 
     {% block corejs %}
@@ -36,8 +38,41 @@
 
     <title>Physio Activities {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+  <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+         <div class="spinner">
+              <span class="spinner-rotate"></span>
+         </div>
+    </section>
+
+    <!-- HEADER -->
+    <header>
+         <div class="container">
+              <div class="row">
+
+                   <div class="col-md-4 col-sm-5">
+                        <ul class="social-icon">
+                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                             <li><a href="#" class="fa fa-twitter"></a></li>
+                             <li><a href="#" class="fa fa-instagram"></a></li>
+                        </ul>
+                   </div>
+
+                   <div class="col-md-8 col-sm-7 text-align-right">
+                        <span class="phone-icon"><i class="fa fa-phone"></i>(01) 48124365</span>
+                        <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 08:00 - 20:00 (Mon-Fri)</span>
+                        <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                  href="#">info@physioactivities.com</a></span>
+                   </div>
+
+              </div>
+         </div>
+    </header>
+
     {% if messages %}
+
     {% endif %}
 
     {% block page_header %}
