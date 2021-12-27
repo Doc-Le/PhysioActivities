@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-oqk^q-zj4d33re70p5yubv)l)#am*pmkg+3t_3x+=iug@bd9%2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['physioactivities.herokuapp.com', 'localhost']
 
 
 # Application definition
