@@ -750,18 +750,21 @@ header span i {
 
 
 /*---------------------------------------
-    APPOINTMENT             
+    CONTACT & APPOINTMENT            
 -----------------------------------------*/
 
+#contact,
 #appointment {
   padding-top: 100px;
 }
 
+#contact label,
 #appointment label {
   color: #393939;
   font-weight: 500;
 }
 
+#contact .form-control,
 #appointment .form-control {
   background: #f9f9f9;
   border: none;
@@ -773,11 +776,14 @@ header span i {
   transition: all ease-in-out 0.4s;
 }
 
+#contact input,
+#contact select,
 #appointment input,
 #appointment select {
   height: 45px;
 }
 
+#contact button#cf-submit,
 #appointment button#cf-submit {
   background: #a5c422;
   color: #ffffff;
@@ -785,6 +791,7 @@ header span i {
   height: 55px;
 }
 
+#contact button#cf-submit:hover,
 #appointment button#cf-submit:hover {
   background: #393939;
   color: #ffffff;

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block menu_links %}
+     <li><a href="./#top" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+   <!-- MAKE AN APPOINTMENT -->
+   <!-- <section id="appointment" data-stellar-background-ratio="3">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-6 col-sm-6">
+                       <img src="{% static 'images/appointment-image.jpg' %}" class="img-responsive" alt="">
+                  </div>
+
+                  <div class="col-md-6 col-sm-6">
+                       
+                       <form id="appointment-form" role="form" method="post" action="#">
+                          
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                 <h2>Make an appointment</h2>
+                            </div>
+
+                            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="name">First name and last name</label>
+                                      <input type="text" class="form-control" id="name" name="name"
+                                           placeholder="First name and last name">
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="email">E-mail</label>
+                                      <input type="email" class="form-control" id="email" name="email"
+                                           placeholder="Your e-mail">
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="date">Choose the date of your visit</label>
+                                      <input type="date" name="date" value="" class="form-control">
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="select">Choose a physiotherapist</label>
+                                      <select class="form-control">
+                                           <option>Leandro De Araujo</option>
+                                           <option>Glaucia De Araujo</option>
+                                           <option>Rodrigo Sodano</option>
+                                      </select>
+                                 </div>
+
+                                 <div class="col-md-12 col-sm-12">
+                                      <label for="telephone">Phone number</label>
+                                      <input type="tel" class="form-control" id="phone" name="phone"
+                                           placeholder="Your phone number">
+                                      <label for="Message">Message</label>
+                                      <textarea class="form-control" rows="5" id="message" name="message"
+                                           placeholder="Comments"></textarea>
+                                      <button type="submit" class="form-control" id="cf-submit"
+                                           name="submit">Register</button>
+                                 </div>
+                            </div>
+                       </form>
+                  </div>
+
+             </div>
+        </div>
+   </section> -->
+
+{% endblock %}

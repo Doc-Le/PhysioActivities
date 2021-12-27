@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block menu_links %}
+     <li><a href="#top" class="smoothScroll"><i class="fa fa-home"></i></a></li>
+     <li><a href="#about" class="smoothScroll">About Us</a></li>
+     <li><a href="#team" class="smoothScroll">Our Team</a></li>
+     <li><a href="#news" class="smoothScroll">Services</a></li>
+     <li><a href="#contact" class="smoothScroll">Contact</a></li>
+     <li><a href="#google-map" class="smoothScroll">Location</a></li>
+     <li class="appointment-btn"><a href="./appointment">Make an appointment</a></li>
+{% endblock %}
+
 {% block page_header %}
 
 {% endblock %}
@@ -35,7 +45,7 @@
                                  <div class="col-md-offset-1 col-md-10">
                                       <h3>We will show you how to change your current lifestyle</h3>
                                       <h1>A new way of life</h1>
-                                      <a href="#appointment" class="section-btn btn btn-default smoothScroll">Make an appointment for a visit</a>
+                                      <a href="#appointment" class="section-btn btn btn-default smoothScroll">Book Now!</a>
                                  </div>
                             </div>
                        </div>
@@ -81,12 +91,12 @@
                             <img src="{% static 'images/team-image1.jpg' %}" class="img-responsive" alt="">
 
                             <div class="team-info">
-                                 <h3>Jan Kowalski</h3>
-                                 <p>Physiotherapy specialist</p>
+                                 <h3>Leandro De Araujo</h3>
+                                 <p>Clinical Lead Senior Physiotherapist</p>
                                  <div class="team-contact-info">
                                       <p><i class="fa fa-phone"></i> 200-300-400</p>
                                       <p><i class="fa fa-envelope-o"></i> <a
-                                                href="#">jan.kowalski@physioactivities.com</a></p>
+                                                href="#">Leandro@physioactivities.com</a></p>
                                  </div>
                                  <ul class="social-icon">
                                       <li><a href="#" class="fa fa-linkedin-square"></a></li>
@@ -103,12 +113,12 @@
                             <img src="{% static 'images/team-image2.jpg' %}" class="img-responsive" alt="">
 
                             <div class="team-info">
-                                 <h3>Jakub Sowa</h3>
-                                 <p>Sports Physiotherapy</p>
+                                 <h3>Glaucia De Araujo</h3>
+                                 <p>Senior Physiotherapist</p>
                                  <div class="team-contact-info">
                                       <p><i class="fa fa-phone"></i> 100-200-300</p>
                                       <p><i class="fa fa-envelope-o"></i> <a
-                                                href="#">jakub.sowa@physioactivities.com</a></p>
+                                                href="#">glaucia@physioactivities.com</a></p>
                                  </div>
                                  <ul class="social-icon">
                                       <li><a href="#" class="fa fa-linkedin-square"></a></li>
@@ -125,12 +135,12 @@
                             <img src="{% static 'images/team-image3.jpg' %}" class="img-responsive" alt="">
 
                             <div class="team-info">
-                                 <h3>Monika Nowak</h3>
+                                 <h3>Rodrigo Sodano</h3>
                                  <p>Bachelor of Physiotherapy</p>
                                  <div class="team-contact-info">
                                       <p><i class="fa fa-phone"></i> 700-000-010</p>
                                       <p><i class="fa fa-envelope-o"></i> <a
-                                                href="#">monika.nowak@physioactivities.com</a></p>
+                                                href="#">rodrigo@physioactivities.com</a></p>
                                  </div>
                                  <ul class="social-icon">
                                       <li><a href="#" class="fa fa-linkedin-square"></a></li>
@@ -174,7 +184,7 @@
                                  <div class="author">
                                       <img src="{% static 'images/author.jpg' %}" class="img-responsive" alt="">
                                       <div class="author-info">
-                                           <h5>Joao Sowa</h5>
+                                           <h5>Leandro</h5>
                                            <p>Sports Physiotherapy</p>
                                       </div>
                                  </div>
@@ -195,8 +205,8 @@
                                  <div class="author">
                                       <img src="{% static 'images/author.jpg' %}" class="img-responsive" alt="">
                                       <div class="author-info">
-                                           <h5>Joao Sowa</h5>
-                                           <p>Sports Physiotherapy</p>
+                                           <h5>Leandro De Araujo</h5>
+                                           <p>Dry Needling</p>
                                       </div>
                                  </div>
                             </div>
@@ -211,12 +221,12 @@
                             </a>
                             <div class="news-info">
                                  <span>January 27, 2021</span>
-                                 <h3><a href="news-detail.html">Medical visit</a></h3>
+                                 <h3><a href="news-detail.html">Physio visit</a></h3>
                                  <p>How to prepare for the visit?</p>
                                  <div class="author">
                                       <img src="{% static 'images/author2.jpg' %}" class="img-responsive" alt="">
                                       <div class="author-info">
-                                           <h5>Monika </h5>
+                                           <h5>Rodrigo</h5>
                                            <p>Bachelor of Physiotherapy</p>
                                       </div>
                                  </div>
@@ -229,8 +239,8 @@
    </section>
 
 
-   <!-- MAKE AN APPOINTMENT -->
-   <section id="appointment" data-stellar-background-ratio="3">
+   <!-- CONTACT FORM -->
+   <section id="contact" data-stellar-background-ratio="3">
         <div class="container">
              <div class="row">
 
@@ -241,10 +251,9 @@
                   <div class="col-md-6 col-sm-6">
                        <!-- CONTACT FORM HERE -->
                        <form id="appointment-form" role="form" method="post" action="#">
-
-                            <!-- SECTION TITLE -->
+                          <!-- SECTION TITLE -->
                             <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                 <h2>Make an appointment</h2>
+                                 <h2>Contact Us</h2>
                             </div>
 
                             <div class="wow fadeInUp" data-wow-delay="0.8s">
@@ -255,22 +264,11 @@
                                  </div>
 
                                  <div class="col-md-6 col-sm-6">
-                                      <label for="email">E-mail</label>
-                                      <input type="email" class="form-control" id="email" name="email"
-                                           placeholder="Your e-mail">
-                                 </div>
-
-                                 <div class="col-md-6 col-sm-6">
-                                      <label for="date">Choose the date of your visit</label>
-                                      <input type="date" name="date" value="" class="form-control">
-                                 </div>
-
-                                 <div class="col-md-6 col-sm-6">
                                       <label for="select">Choose a physiotherapist</label>
                                       <select class="form-control">
-                                           <option>Jan Kowalski</option>
-                                           <option>Jakub Sowa</option>
-                                           <option>Monika Nowak</option>
+                                           <option>Leandro De Araujo</option>
+                                           <option>Glaucia De Araujo</option>
+                                           <option>Rodrigo Sodano</option>
                                       </select>
                                  </div>
 
