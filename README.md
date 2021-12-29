@@ -10,7 +10,7 @@ This idea originally came up at first as I'm a Senior Physiotherapist working in
 ⦁ Create a user-friendly, well-designed website easily understood 
 ⦁ Create a registration form that stores information about users in a database in an organized fashion. 
 ⦁ Create a login system so that the user has to log in to make an appointment. 
-⦁ Make an appointment form so that the user can submit information about their injury as well as a day and time that     suits them and see if the chosen clinician has availability. 
+⦁ Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them and see if the chosen clinician has availability. 
 ⦁ Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
 ⦁ Have information about the location of the physiotherapist. 
 ⦁ Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
@@ -37,7 +37,15 @@ Home page with search bar with image and space for text.
 
 ## Design 
 
-Color Scheme
+  * Color Scheme
+      The two main colors used are green and white.
+
+  * Typography
+    The Roboto font is the main font used throughout the whole portfolio with Sans Serif as the fallback font.
+  
+  * Imagery
+    Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+
 
 ## Wireframe
 
@@ -74,3 +82,8 @@ Pen index.html file to view the project in your browser
 ## Content
 
 All content was written by the developer
+
+## Media
+
+* Logo custom made by the developer with Adobe Illustrator
+* All images found []
