@@ -26,6 +26,10 @@
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="{% static 'css/base.css' %}">
      {% endblock %}
+
+     {% block extra_css %}
+     {% endblock %}
+     
      {% block corejs %}
      <script type="text/javascript" src="{% static 'js/calendar.js' %}"></script>
      {% endblock %}
@@ -54,7 +58,7 @@
 
                     <div class="col-md-4 col-sm-5">
                          <ul class="social-icon">
-                              <li><a href="#" class="fa fa-facebook-square"></a></li>
+                              <li><a href="https://www.facebook.com" rel="noopener" rel="noreferrer" class="fa fa-facebook-square"></a></li>
                               <li><a href="#" class="fa fa-twitter"></a></li>
                               <li><a href="#" class="fa fa-instagram"></a></li>
                          </ul>
@@ -183,6 +187,11 @@
       <script src="{% static 'js/smoothscroll.js' %}"></script>
       <script src="{% static 'js/owl.carousel.min.js' %}"></script>
       <script src="{% static 'js/custom.js' %}"></script>
-     {% endblock %}     
+      <!-- Stripe -->
+      <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+      <script src="https://js.stripe.com/v3/"></script>
+     {% endblock %}
+     {% block postloadjs_extra %}    
+     {% endblock %}
 </body>
 </html>
