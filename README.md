@@ -26,6 +26,7 @@ JavaScript
 Bootstrap5
 MySQL
 API
+Stripe payment
 
 ## Features
 
@@ -63,21 +64,52 @@ Testing User Stories from User Experience Section
 This app was tested on Google Chrome, Microsoft Edge, and Safari browsers
 This app was viewed on a variety of devices such as Desktop, Laptop, IPhone7, IPhone8
 
+## Stripe 
+
+### Accept payments with Stripe Checkout
+
+We built a easy straight forward checkout to provide to the client the best experience.
+Once the customer choose the clinician/date/time and is ready to pay, use Stripe.js to redirect them to the URL of your Stripe hosted payment page.
+
+### Stripe demo/mock card
+
+The demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
+
+
 ## Deployment
 
 The project was deployed to GitHub Pages using the following steps:
 
-Log in to GitHub and locate the GitHub Repository
-At the top of the Repository (not top of the page), locate the Settings Button on the menu
-Scroll down the Setting page until you locate the GitHub Pages Section
-Under Source, click the dropdown called “None” and select “Master Branch”
-The Page will automatically refresh
-Scroll back down through the page to locate the now published site Link in the GitHub Pages section
+* Log in to GitHub and locate the GitHub Repository
+* At the top of the Repository (not top of the page), locate the Settings Button on the menu
+* Scroll down the Setting page until you locate the GitHub Pages Section
+* Under Source, click the dropdown called “None” and select “Master Branch”
+* The Page will automatically refresh
+* Scroll back down through the page to locate the now published site Link in the GitHub Pages section
 
-## How to Run
+### Forking the GitHub Repository
 
-Clone the Repository
-Pen index.html file to view the project in your browser
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Doc-Le/PhysioActivities.git)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/Doc-Le/PhysioActivities
+```
+
+7. Press Enter. Your local clone will be created.
+
 
 ## Content
 
