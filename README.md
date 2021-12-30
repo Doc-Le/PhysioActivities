@@ -15,7 +15,7 @@ This idea originally came up at first as I'm a Senior Physiotherapist working in
 ⦁ Have information about the location of the physiotherapist. 
 ⦁ Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
 
-Demo - See live code: https://
+Demo - See live code: https://physioactivities.com 
 
 ## Tech used
 
@@ -28,13 +28,19 @@ MySQL
 API
 Stripe payment
 
+
+
 ## Features
 
-Easy navigation bar and at key places throughout design
-About us page with introductory information
-Log-in and creat new account link page with email and password
-Create new account page with full name,email and new password.
-Home page with search bar with image and space for text. 
+The easy navigation bar and at key places throughout the design.
+About us page with introductory information.
+Meet the team segment that presents each member of the team.
+Services page detailing each technique with a client comment.
+Make an appointment button that takes the user to log in or sign-up.
+User Easy access to the booking system, choose the type of service, clinician, time, and date.
+Online payment with a credit card.
+
+
 
 ## Design 
 
