@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')  #'aub9g1ep^kx7a6n96j3i@)ybn=75q^yv7@0a&zv_803sk^=*='
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,9 +32,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'appointment',
-    
-    # payment
-
     # Other
     'storages',
 ]
@@ -78,8 +75,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.emailBackend'
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -87,8 +82,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-
-
+HOST_DOMAIN = os.environ.get('HOST_DOMAIN', '')
 
 WSGI_APPLICATION = 'physioactivities.wsgi.application'
 
@@ -126,6 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -137,13 +132,16 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+STRIPE_PUBLIC_KEY = "pk_test_51KBLl5IVkDFu5crEV1OxBw3SexyMJ5iT9rQ3KSZtXWzOa6ckW96Yoi0VjDbYCiew8o6qqtW053WjT7BP2fLSnmy500cOLvcPxB"
+STRIPE_SECRET_KEY = "sk_test_51KBLl5IVkDFu5crElTmeW0uvV1T2JwktgY9UK8GgCMHmMsWQ5islMY4MEDxfYV7k5qrD58rmxwqQL6UDdILWL4aZ00GIMll7qN"
+STRIPE_WEBHOOK_SECRET = ""
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(STATIC_URL, 'images')
@@ -177,3 +175,14 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
                                                                                                                   
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.emailBackend'
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
