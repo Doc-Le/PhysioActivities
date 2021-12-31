@@ -22,16 +22,29 @@ Demo - See live code: https://physioactivities.com
 
 ## Tech used
 
-HTML
-CSS
-DJANGO
-JavaScript
-Bootstrap5
-MySQL
-API
-Stripe payment
+*HTML
+*CSS
+*DJANGO
+*JavaScript
+*Bootstrap5
+*MySQL
+*API
+*Stripe payment
 
+### Frameworks, Libraries & database
 
+1. [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    * Bootstrap was used Stores CSS Bootstrap library files
+2. [AwS3](https://eu-west-1.console.aws.amazon.com/)
+    * jsDoc was used as format to Stores JavaScript Bootstrap library 
+3. [CSS3](http://www.css3.com/)
+    * CSS3 was used for Implementation of main HTML CSS that imports all CSS files in the main CSS folder 
+4. [Git](https://git-scm.com/)
+    * Git was used for version control by utilizing the IDE terminal to commit to git and push to GitHub
+5. [GitHub](https://github.com/Doc-Le/PhysioActivities.git)
+    * GitHub is used to store the project after being pushed from Git 
+5. [Heroku](https://dashboard.heroku.com)
+    * GitHub is used to store the project after being pushed from Git  
 
 ## Features
 
@@ -42,7 +55,6 @@ Services page detailing each technique with a client comment.
 Make an appointment button that takes the user to log in or sign-up.
 User Easy access to the booking system, choose the type of service, clinician, time, and date.
 Online payment with a credit card.
-
 
 
 ## Design 
