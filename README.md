@@ -1,5 +1,8 @@
 ## Milestone - Final Project 
+
 # Logo
+
+![Alt](\images\logo-225x45.png "PhysioActivities")
 
 # Intro
 Physiotherapy Clinic website 
