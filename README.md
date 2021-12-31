@@ -1,4 +1,4 @@
-## Milestone - Final Project 
+## Milestone 4 - Final Project 
 
 # Logo
 
@@ -43,8 +43,18 @@ Demo - See live code: https://physioactivities.com
     * Git was used for version control by utilizing the IDE terminal to commit to git and push to GitHub
 5. [GitHub](https://github.com/Doc-Le/PhysioActivities.git)
     * GitHub is used to store the project after being pushed from Git 
-5. [Heroku](https://dashboard.heroku.com)
+6. [Heroku](https://dashboard.heroku.com)
     * GitHub is used to store the project after being pushed from Git  
+7. [Stellar.js v0.6.2 ](http://markdalgleish.com/projects/stellar.js)
+    
+8. [Sticky Plugin v1.0.3 for jQuery](http://stickyjs.com/)
+    
+9. [Owl Carousel v2.2.1] ( Copyright 2013-2017 David Deutsch)
+    
+10. [SmoothScroll](Copyright 2013 http://DWUser.com)
+
+10. [/*! WOW - v1.0.2 - 2014-10-28](Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT)
+            
 
 ## Features
 
@@ -116,21 +126,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Doc-Le/PhysioActivities.git)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/Doc-Le/PhysioActivities
-```
-
-7. Press Enter. Your local clone will be created.
-### Installation and Set-up
+### Making a Local Clone, Installation and Set-up
 To view the app, open the live site link provided below on the README.
 Here is a run through of how to set up the application:
 * **Step 1** : Downloading a ZIP file of the code, or Clone this repository using by command:
@@ -183,11 +179,13 @@ $ python manage.py migrate
 ```#!/bin/sh
 $ python manage.py runserver
 ```
+
 ## Content
 
 All content was written by the developer
 
+
 ## Media
 
 * Logo custom made by the developer with Adobe Illustrator
-* All images found []
+* All images found [Image: wutzkoh / stock.adobe.com]
