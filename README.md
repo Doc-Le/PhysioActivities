@@ -115,8 +115,59 @@ $ git clone https://github.com/Doc-Le/PhysioActivities
 ```
 
 7. Press Enter. Your local clone will be created.
+### Installation and Set-up
+To view the app, open the live site link provided below on the README.
+Here is a run through of how to set up the application:
+* **Step 1** : Downloading a ZIP file of the code, or Clone this repository using by command:
+```#!/bin/sh
+$ git clone https://github.com/Doc-Le/PhysioActivities.git
+```
+* **Step 2** : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened
+* **Step 3** : Go to the project root directory and install the virtualenv library using pip an afterwards create a virtual environment. Run the following commands respectively:
+```#!/bin/sh
+$ pip install virtualenv
+$ virtualenv venv
+```
+Windows
+```#!/bin/sh
+$ source venv/Scripts/activate
+```
+Linux / Mac
+```#!/bin/sh
+$ source venv/bin/activate
+```
+* Note that you can exit the virtual environment by running the command:
+```#!/bin/sh
+$ deactivate
+```
+* **Step 4** : Download the all dependencies in the requirements.txt by running the command:
+```#!/bin/sh
+$ pip install -r requirements.txt
+```
 
+* **Step 5** : Make Django database models migrations by running the command:
+```#!/bin/sh
+$ python manage.py makemigrations
+```
 
+* **Step 6** : Migrate Django database models by running the command:
+```#!/bin/sh
+$ python manage.py migrate
+```
+* **Step 7** : Update environment variables on `settings` file
+  | Variable  | Description |
+  | --- | --- |
+  | `SECRET_KEY`  | Django secret key |
+  | `STRIPE_PUBLIC_KEY`  | todo... |
+  | `STRIPE_SECRET_KEY`  | todo... |
+  | `EMAIL_HOST_PASS`  | Email host 2-way auhtentication password when sending Django SMTP emails |
+  | `EMAIL_HOST_USER`  | Email host user used when sending Django SMTP emails |
+  | `HOST_DOMAIN`  | Local host domain that is usually default Django **`http://127.0.0.1:8000`** |
+
+* **Step 8** : Run server by running the command:
+```#!/bin/sh
+$ python manage.py runserver
+```
 ## Content
 
 All content was written by the developer
