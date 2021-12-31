@@ -17,7 +17,7 @@
 <!-- APPOINTMENT -->
 <section id="wizard" data-stellar-background-ratio="3">
   <div class="container">
-    <form id="appointment-form" role="form">
+    <form id="appointment-form">
       <div class="row">
         <div class="col-md-12">
           <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
@@ -72,6 +72,7 @@
               <div class="form-group">
                 <label for="resourceField">Choose Clinician</label>
                 <select id="resourceField" class="form-control">
+                  <option value="">...</option>
                   {% for resource in resources %}
                   <option value="{{ resource.id }}">{{ resource.first_name }} {{ resource.last_name }}</option>
                   {% endfor %}
@@ -82,9 +83,7 @@
               <div class="form-group">
                 <label for="serviceField">Choose Service</label>
                 <select id="serviceField" class="form-control">
-                  {% for service in services %}
-                  <option value="{{ service.id }}">&euro; {{ service.get_display_price }} - {{ service.name }}</option>
-                  {% endfor %}
+                  <option value="">...</option>
                 </select>
               </div>
             </div>
@@ -92,8 +91,9 @@
               <div class="form-group">
                 <label for="dateField">Choose the date of your visit</label>
                 <select id="dateField" class="form-control">
-                  {% for date in calendarDates %}
-                  <option value="{{ date.id }}">{{ date.date }}/{{ date.month }}/{{ date.year }}</option>
+                  <option value="">...</option>
+                  {% for calendarDate in calendarDates %}
+                  <option value="{{ calendarDate.id }}">{{ calendarDate }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -102,9 +102,7 @@
               <div class="form-group">
                 <label for="select">Choose the time</label>
                 <select id="timeField" class="form-control">
-                  {% for time in calendarTimes %}
-                  <option value="{{ time.id }}">{{ time.hour }}:{{ time.minute }} h</option>
-                  {% endfor %}
+                  <option value="">...</option>
                 </select>
               </div>
             </div>
@@ -120,9 +118,7 @@
               </a>
             </div>
             <div class="col-md-6 col-sm-6 ">
-              <button id="checkout-button" class="btn btn-primary pull-right">Complete
-                Payment</i>
-                </a>
+              <button type="button" id="checkout-button" class="btn btn-primary pull-right">Complete Payment</button>
             </div>
           </div>
         </div>
@@ -135,59 +131,14 @@
 {% endblock %}
 
 {% block postloadjs_extra %}
-<script type="text/javascript">
-  const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-  // Create an instance of the Stripe object with your publishable API key
-  const stripe = Stripe("{{ STRIPE_PUBLIC_KEY }}");
-  const checkoutButton = document.getElementById("checkout-button");
-  checkoutButton.addEventListener("click", function () {
 
-    const serviceSelect = document.getElementById('serviceField');
-    const serviceId = serviceSelect.options[serviceSelect.selectedIndex].value;
-    const checkoutUrl = `{{ checkoutUrl }}${serviceId}/`;
-    // save appointment model backend
-    // populate available services per selected resource via JS call from UI
-    // populate available times per selected date via JS call from UI
-    const appointment = {
-      userId: 0,
-      firstName: $('#firstNameField').val(),
-      lastName: $('#lastNameField').val(),
-      gender: $('#genderField').val(),
-      phone: $('#phoneField').val(),
-      email: $('#emailField').val(),
-      resource: $('#resourceField').val(),
-      location: $('#locationField').val(),
-      service: $('#serviceField').val(),
-      date: $('#dateField').val(),
-      time: $('#timeField').val(),
-    };
-    fetch(checkoutUrl, {
-      method: "POST",
-      headers: {
-        'X-CSRFToken': csrftoken
-      },
-      body: JSON.stringify({
-        appointment
-      })
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (session) {
-        return stripe.redirectToCheckout({ sessionId: session.id });
-      })
-      .then(function (result) {
-        // If redirectToCheckout fails due to a browser or network
-        // error, you should display the localized error message to your
-        // customer using error.message.
-        if (result.error) {
-          alert(result.error.message);
-        }
-      })
-      .catch(function (error) {
-        console.error("Error:", error);
-      });
-  });
+    {{ block.super }}
+    <script type="text/javascript">
+      // Set UI Django variables
+      const stripe = Stripe('{{ STRIPE_PUBLIC_KEY }}');
+      const checkoutUri = '{{ checkoutUri }}';
+    </script>
+    
+    <script type="text/javascript" src="{% static 'appointment/js/index.js' %}"></script>
 
-</script>
 {% endblock %}
