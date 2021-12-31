@@ -1,5 +1,4 @@
-/*! 
-* The website was created with a bootstrap start licensed under MIT
+/*
 * Template 2098 Health (http://www.tooplate.com/view/2098-health)
 */
 
@@ -458,11 +457,11 @@ header span i {
 }
 
 .slider .item-second {
-  background-image: url(../images/slider2.jpg);
+  background-image: url(../images/newslide.jpg);
 }
 
 .slider .item-third {
-  background-image: url(../images/slider3.jpg);
+  background-image: url(../images/mainstage-v2-bg.jpg);
 }
 
 
@@ -471,7 +470,7 @@ header span i {
 -----------------------------------------*/
 
 #about {
-  background: url('../images/about-bg.jpg') no-repeat top center;
+  background: url('../images/about.jpg') no-repeat top center;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 150px;
@@ -797,6 +796,18 @@ header span i {
   color: #ffffff;
 }
 
+
+/*---------------------------------------
+      WIZARD SECTION          
+  -----------------------------------------*/
+
+#wizard {
+  padding: 50px 0;
+}
+
+#wizard .wizard-buttons {
+  margin-top: 20px;
+}
 
 /*---------------------------------------
    FOOTER              
