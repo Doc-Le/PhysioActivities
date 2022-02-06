@@ -44,6 +44,21 @@ This idea originally came up at first as I'm a Senior Physiotherapist working in
  * Have information about the location of the physiotherapist. 
  * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
 
+## Design 
+#
+
+  * Color Scheme
+     The two main colors used are green and white.
+
+  * Typography
+    The Roboto font is the main font used throughout the whole portfolio with Sans Serif as the fallback font.
+  
+  * Imagery
+    Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+
+#
+## Wireframe
+#
 
 
 ## Tech used
@@ -95,22 +110,7 @@ User Easy access to the booking system, choose the type of service, clinician, t
 Online payment with a credit card.
 #
 
-## Design 
-#
 
-  * Color Scheme
-      The two main colors used are green and white.
-
-  * Typography
-    The Roboto font is the main font used throughout the whole portfolio with Sans Serif as the fallback font.
-  
-  * Imagery
-    Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
-
-#
-## Wireframe
-#
-#
 ## Testing
 #
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
