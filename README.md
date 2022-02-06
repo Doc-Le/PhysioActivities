@@ -1,38 +1,47 @@
-## Milestone 4 - Final Project 
+# Milestone 4 - Final Project 
 
-# Logo
+Demo - See live: https://physioactivities.herokuapp.com
 
-![Alt](\images\logo-225x45.png "PhysioActivities")
+## Logo
+#
 
-# Intro
-Physiotherapy Clinic website 
+![Alt](static\images\logo-225x45.png "PhysioActivities")
+#
+
+## Intro
+#
+
 This idea originally came up at first as I'm a Senior Physiotherapist working in the field over the last 20 years. I understand the importance to have a platform/website that can provide information about the clinician and independence to make a booking/payment.
+#
 
-# Goals
+## Goals
+#
 
-⦁ Create a user-friendly, well-designed website easily understood 
-⦁ Create a registration form that stores information about users in a database in an organized fashion. 
-⦁ Create a login system so that the user has to log in to make an appointment. 
-⦁ Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them and see if the chosen clinician has availability. 
-⦁ Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
-⦁ Have information about the location of the physiotherapist. 
-⦁ Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
+ * Create a user-friendly, well-designed website easily understood 
+ * Create a registration form that stores information about users in a database in an organized fashion. 
+ * Create a login system so that the user has to log in to make an appointment. 
+ * Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them   and see if the chosen clinician has availability. 
+ * Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
+ * Have information about the location of the physiotherapist. 
+ * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
 
-Demo - See live code: https://physioactivities.com 
+
 
 ## Tech used
+#
 
-*HTML
-*CSS
-*DJANGO
-*JavaScript
-*Bootstrap5
-*MySQL
-*API
-*Stripe payment
+* HTML
+* CSS
+* DJANGO
+* JavaScript
+* Bootstrap5
+* MySQL
+* API
+* Stripe payment
+#
 
-### Frameworks, Libraries & database
-
+## Frameworks, Libraries & database
+#
 1. [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     * Bootstrap was used Stores CSS Bootstrap library files
 2. [AwS3](https://eu-west-1.console.aws.amazon.com/)
@@ -55,9 +64,9 @@ Demo - See live code: https://physioactivities.com
 
 10. [/*! WOW - v1.0.2 - 2014-10-28](Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT)
             
-
+#
 ## Features
-
+#
 The easy navigation bar and at key places throughout the design.
 About us page with introductory information.
 Meet the team segment that presents each member of the team.
@@ -65,9 +74,10 @@ Services page detailing each technique with a client comment.
 Make an appointment button that takes the user to log in or sign-up.
 User Easy access to the booking system, choose the type of service, clinician, time, and date.
 Online payment with a credit card.
-
+#
 
 ## Design 
+#
 
   * Color Scheme
       The two main colors used are green and white.
@@ -78,25 +88,25 @@ Online payment with a credit card.
   * Imagery
     Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
-
+#
 ## Wireframe
-
-
+#
+#
 ## Testing
-
+#
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 W3C Markup Validator - Results (link)
 Testing User Stories from User Experience Section
 
-
+#
 ## Further Testing
-
+#
 This app was tested on Google Chrome, Microsoft Edge, and Safari browsers
 This app was viewed on a variety of devices such as Desktop, Laptop, IPhone7, IPhone8
-
+#
 ## Stripe 
-
+#
 ### Accept payments with Stripe Checkout
 
 We built a easy straight forward checkout to provide to the client the best experience.
@@ -106,9 +116,9 @@ Once the customer choose the clinician/date/time and is ready to pay, use Stripe
 
 The demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
 
-
+#
 ## Deployment
-
+#
 The project was deployed to GitHub Pages using the following steps:
 
 * Log in to GitHub and locate the GitHub Repository
