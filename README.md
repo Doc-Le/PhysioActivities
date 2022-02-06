@@ -14,6 +14,25 @@ Demo - See live: https://physioactivities.herokuapp.com
 This idea originally came up at first as I'm a Senior Physiotherapist working in the field over the last 20 years. I understand the importance to have a platform/website that can provide information about the clinician and independence to make a booking/payment.
 #
 
+## User Experience (UX)
+
+### User stories
+
+#### First Time Visitor Goals
+
+* As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about what the clinic and the clinician have to offer.
+* As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+* As a First Time Visitor, I want to look for information to understand what each treatment technique has to offer. 
+* As a First Time Visitor, I  also want to locate his social media links to see their followings on social media to determine how trusted and known the company is.
+*  As a First Time Visitor, I want to easily schedule an appointment and pay. 
+
+### Returning Visitor Goals
+
+* As a Returning Visitor, I want to find information about what the clinic has to offer.
+* As a Returning Visitor, I want to find the best way to get in contact with him.
+* As a Returning Visitor, I want to find community links.
+
+
 ## Goals
 #
 
