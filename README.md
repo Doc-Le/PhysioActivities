@@ -29,9 +29,10 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
 ### Returning Visitor Goals
 
 * As a Returning Visitor, I want to find information about what the clinic has to offer.
-* As a Returning Visitor, I want to find the best way to get in contact with him.
-* As a Returning Visitor, I want to find community links.
-
+* As a Returning Visitor, I want to find information about what kind of service is provided.
+* As a Returning Visitor, I want to find information and reviews about the clinicians.
+* As a Returning Visitor, I want to find information about the type of techniques.
+* As a Returning Visitor, I want to find easy access for bookings and payments.
 
 ## Goals
 #
