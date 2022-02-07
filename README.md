@@ -11,7 +11,7 @@ Demo - See live: https://physioactivities.herokuapp.com
 ## Intro
 #
 
-This idea originally came up at first as I'm a Senior Physiotherapist working in the field over the last 20 years. I understand the importance to have a platform/website that can provide information about the clinician and independence to make a booking/payment.
+This idea originally came up first as I'm a Senior Physiotherapist working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
 #
 
 ## User Experience (UX)
