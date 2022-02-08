@@ -50,9 +50,10 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
 
   * Color Scheme
      The two main colors used are green and white.
+     Picked these colors idea from a healthy three that symbolized heath. These colors create a set feel of the site.
 
   * Typography
-    The Poppins font is the main font used throughout the whole portfolio with Sans Serif as the fallback font.
+    The Poppins font is the main font used throughout the whole website.
   
   * Imagery
     Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
