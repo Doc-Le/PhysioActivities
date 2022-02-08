@@ -45,6 +45,33 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
  * Have information about the location of the physiotherapist. 
  * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
 
+
+  ## Current features 
+
+-   Responsive on all device sizes
+
+-   Accessible 
+
+-   Easy to navigate (Single use learning)
+
+-   Interactive elements
+
+-   Social Links 
+
+-   Ability to contact the clinic via contact page.
+
+-   Able to search treatments and clinicians available.
+
+-   Can search future location or details.
+
+-   Logged in users can their previous and future appointments.
+
+-   Logged in user can save their addresses and default address, pre-fills Checkout form
+
+-   Admin user can add, edit and delete any event.
+
+-   Confirmation email on registration and on successful purchase.
+
 ## Design 
 #
 
@@ -53,6 +80,7 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
      Picked these colors idea from a healthy three that symbolized heath. These colors create a set feel of the site.
 
   * Typography
+    Used [Google Fonts](https://fonts.google.com/) to import the fonts used for this site.
     The Poppins font is the main font used throughout the whole website.
   
   * Imagery
@@ -80,8 +108,8 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
 #
 1. [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     * Bootstrap was used Stores CSS Bootstrap library files
-2. [AwS3](https://eu-west-1.console.aws.amazon.com/)
-    * jsDoc was used as format to Stores JavaScript Bootstrap library 
+2. [Django](https://www.djangoproject.com/)
+    - Framework for building applications.
 3. [CSS3](http://www.css3.com/)
     * CSS3 was used for Implementation of main HTML CSS that imports all CSS files in the main CSS folder 
 4. [Git](https://git-scm.com/)
@@ -92,13 +120,19 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
     * GitHub is used to store the project after being pushed from Git  
 7. [Stellar.js v0.6.2 ](http://markdalgleish.com/projects/stellar.js)
     
-8. [Sticky Plugin v1.0.3 for jQuery](http://stickyjs.com/)
-    
-9. [Owl Carousel v2.2.1] ( Copyright 2013-2017 David Deutsch)
+8. [jQuery](https://jquery.com/)
+    - Required for some of the bootstrap elements such as collapsibles, modal and tooltips.
+
+9.  [Owl Carousel v2.2.1] ( Copyright 2013-2017 David Deutsch)
     
 10. [SmoothScroll](Copyright 2013 http://DWUser.com)
 
-10. [/*! WOW - v1.0.2 - 2014-10-28](Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT)
+11. [WOW - v1.0.2 - 2014-10-28](Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT)
+
+12. [Postgres](https://www.postgresql.org/)
+    - Database used for our data
+13. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
+    - Used to generate secret key
             
 #
 ## Features
