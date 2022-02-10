@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'appointment',
+    'user',
     # Other
     'storages',
 ]
