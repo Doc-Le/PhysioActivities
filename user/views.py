@@ -17,5 +17,9 @@ def index(request):
     context = {'profile': profile}
     return render(request, 'user_profile.html', context)
 
-
-
+def login_form(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        
