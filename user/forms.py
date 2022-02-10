@@ -16,4 +16,7 @@ class SignUpForm(UserCreationForm):
     email.widget.attrs.update({'class': 'form-control', 'placeholder': 'Email'})
     first_name.widget.attrs.update({'class': 'form-control', 'placeholder': 'First Name'})
     last_name.widget.attrs.update({'class': 'form-control', 'placeholder': 'Last Name'})
+    password1.widget.attrs.update({'class': 'form-control'})
+    password2.widget.attrs.update({'class': 'form-control'})
+
     
