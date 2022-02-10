@@ -19,4 +19,22 @@ class SignUpForm(UserCreationForm):
     password1.widget.attrs.update({'class': 'form-control'})
     password2.widget.attrs.update({'class': 'form-control'})
 
+class Meta:
+        model = User
+        fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2',)
+
+
+class UserUpdateForm(UserChangeForm):
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'first_name', 'last_name',)
+        widgets = {
+            'username': TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
+            'email': EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
+            'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}),
+            'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}),
+        }
+
+
+
     
