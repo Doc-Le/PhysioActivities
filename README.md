@@ -234,8 +234,8 @@ $ python manage.py migrate
   | Variable  | Description |
   | --- | --- |
   | `SECRET_KEY`  | Django secret key |
-  | `STRIPE_PUBLIC_KEY`  | todo... |
-  | `STRIPE_SECRET_KEY`  | todo... |
+  | `STRIPE_PUBLIC_KEY`  | Generate public key on Stripe portal |
+  | `STRIPE_SECRET_KEY`  | Generate secret key on Stripe portal |
   | `EMAIL_HOST_PASS`  | Email host 2-way auhtentication password when sending Django SMTP emails |
   | `EMAIL_HOST_USER`  | Email host user used when sending Django SMTP emails |
   | `HOST_DOMAIN`  | Local host domain that is usually default Django **`http://127.0.0.1:8000`** |
