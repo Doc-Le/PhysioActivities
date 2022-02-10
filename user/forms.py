@@ -34,6 +34,14 @@ class UserUpdateForm(UserChangeForm):
             'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}),
             'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}),
         }
+        
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('phone',)
+        widgets = {
+            'phone': TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone'}),
+        }
 
 
 
