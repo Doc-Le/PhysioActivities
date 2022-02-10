@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block menu_links %}
+     <li><a href="../" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
+{% endblock %}
+ 
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+                <div class="col-md-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                        <h2>User Profile Update</h2>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-delay="0.8s">
+                        <form method="POST" enctype = "multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                {{ user_form.as_p  }}
+                                {{ profile_form.as_p  }}
+                            </fieldset>
+                            <div class="col-md-12 col-sm-12 ">
+                                <button type="submit" class="btn btn-primary pull-right">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+
+{% endblock %}
