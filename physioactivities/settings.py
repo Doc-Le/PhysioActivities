@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', False)
 
 ALLOWED_HOSTS = [
     'www.physioactivities.com',
@@ -145,8 +145,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-STRIPE_PUBLIC_KEY = "pk_test_51KBLl5IVkDFu5crEV1OxBw3SexyMJ5iT9rQ3KSZtXWzOa6ckW96Yoi0VjDbYCiew8o6qqtW053WjT7BP2fLSnmy500cOLvcPxB"
-STRIPE_SECRET_KEY = "sk_test_51KBLl5IVkDFu5crElTmeW0uvV1T2JwktgY9UK8GgCMHmMsWQ5islMY4MEDxfYV7k5qrD58rmxwqQL6UDdILWL4aZ00GIMll7qN"
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WEBHOOK_SECRET = ""
 
 MEDIA_URL = '/images/'
