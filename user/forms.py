@@ -30,9 +30,9 @@ class UserUpdateForm(UserChangeForm):
         }
 
 CITY = [
-    ('Dublin', 'Wexford'),
-    ('Limerick', 'Cork'),
-    ('Galway', 'waterford'),
+    ('Dublin', 'Wicklow town'),
+    ('Arklow', 'Gorey'),
+    ('', ''),
 ]
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
