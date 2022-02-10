@@ -14,4 +14,18 @@ class SignUpForm(UserCreationForm):
     phone = forms.phoneField(max_length=200,label= 'Phone :')
     location = forms.locationField(max_length=200,label= 'Location :')
     
-    
+    class Meta:
+        model = User
+        fields = ('username', 'email','first_name','last_name', 'password1', 'password2', )
+
+class UserUpdateForm(UserChangeForm):
+    class Meta:
+        model = User
+        fields = ( 'username','email','first_name','last_name')
+        widgets = {
+            'username'  : TextInput(attrs={'class': 'input','placeholder':'username'}),
+            'email'     : EmailInput(attrs={'class': 'input','placeholder':'email'}),
+            'first_name': TextInput(attrs={'class': 'input','placeholder':'first_name'}),
+            'last_name' : TextInput(attrs={'class': 'input','placeholder':'last_name' }),
+        }
+
