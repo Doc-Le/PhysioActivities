@@ -22,4 +22,15 @@ def login_form(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
-        
+    if user is not None:
+            login(request, user)
+            current_user = request.user
+            userprofile = UserProfile.objects.get(user_id=current_user.id)
+            # Redirect to a success page.
+            return HttpResponseRedirect('/')
+    else:
+            messages.warning(request, "Login Error !! Username or Password is incorrect")
+            return HttpResponseRedirect('/login')
+    context = {}
+    return render(request, 'login_form.html', context)
+
