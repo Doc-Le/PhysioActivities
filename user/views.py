@@ -34,3 +34,19 @@ def login_form(request):
     context = {}
     return render(request, 'login_form.html', context)
 
+
+def logout_func(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+
+def signup_form(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()  # completed sign up
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+           
