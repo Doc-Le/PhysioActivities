@@ -7,7 +7,12 @@
      <li><a href="#team" class="smoothScroll">Our Team</a></li>
      <li><a href="#news" class="smoothScroll">Services</a></li>
      <li><a href="#contact" class="smoothScroll">Contact</a></li>
-     <li><a href="#google-map" class="smoothScroll">Location</a></li>
+     {% if profile is None %}
+     <li><a href="/login" class="smoothScroll">Login</a></li>
+     {% else %}
+     <li><a href="/logout" class="smoothScroll">Logout</a></li>
+     {% endif %}
+     <li><a href="/signup" class="smoothScroll">Sign-up</a></li>
      <li class="appointment-btn"><a href="/appointment">Make an appointment</a></li>
 {% endblock %}
 
