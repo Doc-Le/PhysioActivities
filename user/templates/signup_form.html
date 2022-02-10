@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block menu_links %}
+     <li><a href="../" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
+{% endblock %}
+ 
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+                <div class="col-md-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                        <h2>Sign Up Form</h2>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-delay="0.8s">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{message.tags}}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    {{ field.label_tag }}
+                                    {{ field }}
+                                </div>
+                                {% for error in field.errors %}
+                                    <p style="color: red">{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                            <div class="col-md-12 col-sm-12 ">
+                                <button type="submit" class="btn btn-primary pull-right">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+
+{% endblock %}
