@@ -29,3 +29,19 @@ class UserUpdateForm(UserChangeForm):
             'last_name' : TextInput(attrs={'class': 'input','placeholder':'last_name' }),
         }
 
+CITY = [
+    ('Dublin', 'Wexford'),
+    ('Limerick', 'Cork'),
+    ('Galway', 'waterford'),
+]
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('phone', 'address', 'city','country','image','language')
+        widgets = {
+            'phone'     : TextInput(attrs={'class': 'input','placeholder':'phone'}),
+            'address'   : TextInput(attrs={'class': 'input','placeholder':'address'}),
+            'city'      : Select(attrs={'class': 'input','placeholder':'city'},choices=CITY),
+            'country'   : TextInput(attrs={'class': 'input','placeholder':'country' }),
+            'image'     : FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
+        }
