@@ -9,3 +9,13 @@ from user.forms import SignUpForm, UserUpdateForm, ProfileUpdateForm
 from user.models import UserProfile
 
 
+@login_required(login_url='/login')
+def index(request):
+    # Access User Session information
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    context = {'profile': profile}
+    return render(request, 'user_profile.html', context)
+
+
+
