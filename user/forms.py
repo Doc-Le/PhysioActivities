@@ -14,4 +14,6 @@ class SignUpForm(UserCreationForm):
     password2 = forms.CharField(max_length=20, label='Password Confirmation', widget=forms.PasswordInput)
     username.widget.attrs.update({'class': 'form-control', 'placeholder': 'Username'})
     email.widget.attrs.update({'class': 'form-control', 'placeholder': 'Email'})
+    first_name.widget.attrs.update({'class': 'form-control', 'placeholder': 'First Name'})
+    last_name.widget.attrs.update({'class': 'form-control', 'placeholder': 'Last Name'})
     
