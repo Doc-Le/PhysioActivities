@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block menu_links %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block menu_links %}
 <li>
   <a href="#top" class="smoothScroll"><i class="fa fa-home"></i></a>
 </li>
@@ -7,13 +9,16 @@
 <li><a href="#news" class="smoothScroll">Services</a></li>
 <li><a href="#contact" class="smoothScroll">Contact</a></li>
 {% if profile is None %}
-<li><a href="/login" class="smoothScroll">Login</a></li>
+<li class="menu-btn"><a href="/login" class="smoothScroll">Login</a></li>
 {% else %}
-<li><a href="/logout" class="smoothScroll">Logout</a></li>
+<li class="menu-btn"><a href="/logout" class="smoothScroll">Logout</a></li>
 {% endif %}
-<li><a href="/signup" class="smoothScroll">Sign-up</a></li>
-<li class="appointment-btn"><a href="/appointment">Make an appointment</a></li>
-{% endblock %} {% block page_header %} {% endblock %} {% block content %}
+<li class="menu-btn"><a href="/signup" class="smoothScroll">Sign-up</a></li>
+<!-- <li class="appointment-btn"><a href="/appointment">Make an appointment</a></li> -->
+{% endblock %} 
+{% block page_header %} 
+{% endblock %} 
+{% block content %}
 <!-- HOME -->
 <section id="home" class="slider" data-stellar-background-ratio="0.5">
   <div class="container">
@@ -478,4 +483,9 @@
     allowfullscreen
   ></iframe>
 </section>
+
+<div class="appointment-btn">
+  <a href="/appointment">Make an appointment</a>
+</div>
+
 {% endblock %}
