@@ -19,9 +19,10 @@ class SignUpForm(UserCreationForm):
     password1.widget.attrs.update({'class': 'form-control'})
     password2.widget.attrs.update({'class': 'form-control'})
 
+
 class Meta:
-        model = User
-        fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2',)
+    model = User
+    fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2',)
 
 
 class UserUpdateForm(UserChangeForm):
@@ -34,7 +35,8 @@ class UserUpdateForm(UserChangeForm):
             'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}),
             'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}),
         }
-        
+
+
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = UserProfile
@@ -42,7 +44,3 @@ class ProfileUpdateForm(forms.ModelForm):
         widgets = {
             'phone': TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone'}),
         }
-
-
-
-    
