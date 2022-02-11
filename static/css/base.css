@@ -318,25 +318,8 @@ header span i {
   color: #a5c422;
 }
 
-.navbar-default .navbar-nav li.appointment-btn {
-  margin: 3px 0 0 20px;
-}
-
-.navbar-default .navbar-nav li.appointment-btn a {
-  background: #a5c422;
-  border-radius: 3px;
-  color: #ffffff;
-  font-weight: 600;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.navbar-default .navbar-nav li.appointment-btn a:hover {
-  background: #3A383B;
-  color: #ffffff !important;
-}
-
-.navbar-default .navbar-nav li a {
+.navbar-default .navbar-nav li a,
+div.appointment-btn a {
   color: #3A393B;
   font-size: 12px;
   font-weight: 500;
@@ -379,9 +362,38 @@ header span i {
   background-color: transparent;
 }
 
-
 .navbar-brand {
   padding: 5px 15px 0;
+}
+
+.navbar-default .navbar-nav li.menu-btn,
+div.appointment-btn {
+  margin: 3px 0 0 10px;
+}
+
+div.appointment-btn {
+  position:fixed;
+  width:200px;
+  bottom: 25px;
+  right: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+.navbar-default .navbar-nav li.menu-btn a,
+div.appointment-btn a {
+  background: #a5c422;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.navbar-default .navbar-nav li.menu-btn a:hover,
+div.appointment-btn a:hover {
+  background: #3A383B;
+  color: #ffffff !important;
 }
 
 
