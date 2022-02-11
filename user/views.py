@@ -23,15 +23,15 @@ def login_form(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        current_user = request.user
-        userprofile = UserProfile.objects.get(user_id=current_user.id)
-        # Redirect to a success page.
-        return HttpResponseRedirect('/')
-    else:
-        messages.warning(request, "Login Error !! Username or Password is incorrect")
-        return HttpResponseRedirect('/login')
+        if user is not None:
+            login(request, user)
+            # Redirect to a success page.
+            return HttpResponseRedirect('/')
+        else:
+            # Return an 'invalid login' error message.
+            messages.warning(request, "Login Error !! Username or Password is incorrect")
+            return HttpResponseRedirect('/login')
+    
     context = {}
     return render(request, 'login_form.html', context)
 
@@ -50,7 +50,7 @@ def signup_form(request):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
-  # Create data in profile table for user
+            # Create data in profile table for user
             current_user = request.user
             data = UserProfile()
             data.user_id = current_user.id
