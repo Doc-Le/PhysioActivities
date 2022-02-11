@@ -1,187 +1,253 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-
     {% block meta %}
-        <meta charset="utf-8"> 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="Tooplate">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    {% endblock %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Tooplate" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/owl.theme.default.min.css' %}"
+    />
 
-    {% block extra_meta %}
-    {% endblock %}
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
+    <script src="{% static 'js/calendar.js' %}"></script>
+    {% endblock %} {% block extra_js %} {% endblock %}
 
-    {% block corecss %}
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-     
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-     {% endblock %}
+    <title>Physio Activities {% block extra_title %}{% endblock %}</title>
+  </head>
+  <body
+    id="top"
+    data-spy="scroll"
+    data-target=".navbar-collapse"
+    data-offset="50"
+  >
+    {% if messages %} {% endif %}
 
-     {% block extra_css %}
-     {% endblock %}
-     
-     {% block corejs %}
-     <script src="{% static 'js/calendar.js' %}"></script>
-     {% endblock %}
+    <!-- PRE LOADER -->
+    <section class="preloader">
+      <h6 style="display: none">&nbsp;</h6>
+      <div class="spinner">
+        <span class="spinner-rotate"></span>
+      </div>
+    </section>
 
-     {% block extra_js %}
-     {% endblock %}
-
-     <title>Physio Activities {% block extra_title %}{% endblock %}</title>
-</head>
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-     {% if messages %}
-
-     {% endif %}
- 
-     <!-- PRE LOADER -->
-     <section class="preloader">
-          <h6 style="display: none;">&nbsp;</h6>
-          <div class="spinner">
-               <span class="spinner-rotate"></span>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-5">
+            <ul class="social-icon">
+              <li>
+                <a
+                  href="https://www.facebook.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-facebook-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.twitter.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-twitter"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-instagram"
+                ></a>
+              </li>
+            </ul>
           </div>
-     </section>
 
-     <!-- HEADER -->
-     <header>
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-4 col-sm-5">
-                         <ul class="social-icon">
-                              <li><a href="https://www.facebook.com" rel="noopener noreferrer" class="fa fa-facebook-square"></a></li>
-                              <li><a href="https://www.twitter.com" rel="noopener noreferrer" class="fa fa-twitter"></a></li>
-                              <li><a href="https://www.instagram.com" rel="noopener noreferrer" class="fa fa-instagram"></a></li>
-                         </ul>
-                    </div>
-
-                    <div class="col-md-8 col-sm-7 text-align-right">
-                         <span class="phone-icon"><i class="fa fa-phone"></i>(01) 48124365</span>
-                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 08:00 - 20:00 (Mon-Fri)</span>
-                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
-                                   href="mailto:info@physioactivities.com">info@physioactivities.com</a></span>
-                    </div>
-
-               </div>
+          <div class="col-md-8 col-sm-7 text-align-right">
+            <span class="phone-icon"
+              ><i class="fa fa-phone"></i>(01) 48124365</span
+            >
+            <span class="date-icon"
+              ><i class="fa fa-calendar-plus-o"></i> 08:00 - 20:00
+              (Mon-Fri)</span
+            >
+            <span class="email-icon"
+              ><i class="fa fa-envelope-o"></i>
+              <a href="mailto:info@physioactivities.com"
+                >info@physioactivities.com</a
+              ></span
+            >
           </div>
-          {% block page_header %}
-          {% endblock %}          
-     </header>
+        </div>
+      </div>
+      {% block page_header %} {% endblock %}
+    </header>
 
-     <!-- MENU -->
-     <section class="navbar navbar-default navbar-static-top" role="navigation">
-          <div class="container">
+    <!-- MENU -->
+    <section class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <h6 style="display: none">&nbsp;</h6>
+          <button
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon icon-bar"></span>
+            <span class="icon icon-bar"></span>
+            <span class="icon icon-bar"></span>
+          </button>
 
-               <div class="navbar-header">
-                    <h6 style="display: none;">&nbsp;</h6>
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
+          <!-- lOGO TEXT HERE -->
+          <a href="#top" class="navbar-brand">
+            <img
+              src="{% static 'images/logo-225x45.png' %}"
+              alt="Physio Activities"
+            />
+          </a>
+        </div>
 
-                    <!-- lOGO TEXT HERE -->
-                    <a href="#top" class="navbar-brand">
-                         <img src="{% static 'images/logo-225x45.png' %}" alt="Physio Activities" />
-                    </a>
-               </div>
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            {% block menu_links %} {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </section>
 
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                         {% block menu_links %}
-                         {% endblock %}
-                    </ul>
-               </div>
+    {% block content %} {% endblock %}
 
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="footer-thumb">
+              <h4 class="wow fadeInUp" data-wow-delay="0.4s">
+                Contact information
+              </h4>
+
+              <div class="contact-info">
+                <p><i class="fa fa-phone"></i>(01) 48124365</p>
+                <p>
+                  <i class="fa fa-envelope-o"></i>
+                  <a href="mailto:info@physioactivities.com"
+                    >info@physioactivities.com</a
+                  >
+                </p>
+              </div>
+            </div>
           </div>
-     </section>
- 
-     {% block content %}
-     {% endblock %}
- 
-     <!-- FOOTER -->
-     <footer data-stellar-background-ratio="5">
-          <div class="container">
-               <div class="row">
 
-                    <div class="col-md-4 col-sm-4">
-                         <div class="footer-thumb">
-                            <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact information</h4>
-                              
-                              <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i>(01) 48124365</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="mailto:info@physioactivities.com">info@physioactivities.com</a></p>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="footer-thumb">
-                              <div class="calendar"></div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="footer-thumb">
-                              <div class="opening-hours">
-                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Hours</h4>
-                                   <p>Monday - Friday<span>08:00 -20:00</span></p>
-                                   <p>Saturday  <span>Closed</span></p>
-                                   <p>Sunday  <span>Closed</span></p>
-                              </div>
-
-                              <ul class="social-icon">
-                                   <li><a href="https://www.facebook.com" rel="noopener noreferrer" class="fa fa-facebook-square"></a></li>
-                                   <li><a href="https://www.twitter.com" rel="noopener noreferrer" class="fa fa-twitter"></a></li>
-                                   <li><a href="https://www.instagram.com" rel="noopener noreferrer" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-12 col-sm-12 border-top">
-                         <div class="col-md-4 col-sm-6">
-                              <div class="copyright-text">
-                                   <p>Copyright &copy; 2021 Physio Activities</p>
-                              </div>
-                         </div>
-                         <div class="col-md-2 col-sm-2 text-align-center">
-                              <div class="angle-up-btn">
-                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
-                                             class="fa fa-angle-up"></i></a>
-                              </div>
-                         </div>
-                    </div>
-
-               </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="footer-thumb">
+              <div class="calendar"></div>
+            </div>
           </div>
-     </footer>
 
-     {% block postloadjs %}
-      <!-- SCRIPTS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      <script src="{% static 'js/jquery.sticky.js' %}"></script>
-      <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-      <script src="{% static 'js/wow.min.js' %}"></script>
-      <script src="{% static 'js/smoothscroll.js' %}"></script>
-      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-      <script src="{% static 'js/custom.js' %}"></script>
-      <!-- Stripe -->
-      <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-      <script src="https://js.stripe.com/v3/"></script>
-     {% endblock %}
-     {% block postloadjs_extra %}    
-     {% endblock %}
-</body>
+          <div class="col-md-4 col-sm-4">
+            <div class="footer-thumb">
+              <div class="opening-hours">
+                <h4 class="wow fadeInUp" data-wow-delay="0.4s">Hours</h4>
+                <p>Monday - Friday<span>08:00 -20:00</span></p>
+                <p>Saturday <span>Closed</span></p>
+                <p>Sunday <span>Closed</span></p>
+              </div>
+
+              <ul class="social-icon">
+                <li>
+                  <a
+                    href="https://www.facebook.com"
+                    rel="noopener noreferrer"
+                    class="fa fa-facebook-square"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.twitter.com"
+                    rel="noopener noreferrer"
+                    class="fa fa-twitter"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com"
+                    rel="noopener noreferrer"
+                    class="fa fa-instagram"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-sm-12 border-top">
+            <div class="col-md-4 col-sm-6">
+              <div class="copyright-text">
+                <p>Copyright &copy; 2021 Physio Activities</p>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 text-align-center">
+              <div class="angle-up-btn">
+                <a
+                  href="#top"
+                  class="smoothScroll wow fadeInUp"
+                  data-wow-delay="1.2s"
+                  ><i class="fa fa-angle-up"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    {% block postloadjs %}
+    <!-- SCRIPTS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"
+      integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <!-- Stripe -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %} {% block postloadjs_extra %} {% endblock %}
+  </body>
 </html>
