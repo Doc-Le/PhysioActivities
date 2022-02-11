@@ -1,320 +1,481 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block menu_links %}
-     <li><a href="#top" class="smoothScroll"><i class="fa fa-home"></i></a></li>
-     <li><a href="#about" class="smoothScroll">About Us</a></li>
-     <li><a href="#team" class="smoothScroll">Our Team</a></li>
-     <li><a href="#news" class="smoothScroll">Services</a></li>
-     <li><a href="#contact" class="smoothScroll">Contact</a></li>
-     {% if profile is None %}
-     <li><a href="/login" class="smoothScroll">Login</a></li>
-     {% else %}
-     <li><a href="/logout" class="smoothScroll">Logout</a></li>
-     {% endif %}
-     <li><a href="/signup" class="smoothScroll">Sign-up</a></li>
-     <li class="appointment-btn"><a href="/appointment">Make an appointment</a></li>
-{% endblock %}
-
-{% block page_header %}
-
-{% endblock %}
-
-{% block content %}
-    <!-- HOME -->
-    <section id="home" class="slider" data-stellar-background-ratio="0.5">
-        <div class="container">
-             <div class="row">
-                  <div class="owl-carousel owl-theme">
-                       <div class="item item-first">
-                            <div class="caption">
-                                 <div class="col-md-offset-1 col-md-10">
-                                      <h3>We will make your life happier</h3>
-                                      <h1>Life without pain</h1>
-                                      <a href="#team" class="section-btn btn btn-blue smoothScroll">Meet ours physiotherapists</a>
-                                 </div>
-                            </div>
-                       </div>
-                       <div class="item item-second">
-                            <div class="caption">
-                                 <div class="col-md-offset-1 col-md-10">
-                                      <h3>Effective and professional</h3>
-                                      <h1>Modern methods of treatment</h1>
-                                      <a href="#about"
-                                           class="section-btn btn btn-default btn-gray smoothScroll">More About us</a>
-                                 </div>
-                            </div>
-                       </div>
-                       <div class="item item-third">
-                            <div class="caption">
-                                 <div class="col-md-offset-1 col-md-10">
-                                      <h3>We will show you how to change your current lifestyle</h3>
-                                      <h1>A new way of life</h1>
-                                      <a href="/appointment" class="section-btn btn btn-default smoothScroll">Book Now!</a>
-                                 </div>
-                            </div>
-                       </div>
-                  </div>
-             </div>
+{% extends "base.html" %} {% load static %} {% block menu_links %}
+<li>
+  <a href="#top" class="smoothScroll"><i class="fa fa-home"></i></a>
+</li>
+<li><a href="#about" class="smoothScroll">About Us</a></li>
+<li><a href="#team" class="smoothScroll">Our Team</a></li>
+<li><a href="#news" class="smoothScroll">Services</a></li>
+<li><a href="#contact" class="smoothScroll">Contact</a></li>
+{% if profile is None %}
+<li><a href="/login" class="smoothScroll">Login</a></li>
+{% else %}
+<li><a href="/logout" class="smoothScroll">Logout</a></li>
+{% endif %}
+<li><a href="/signup" class="smoothScroll">Sign-up</a></li>
+<li class="appointment-btn"><a href="/appointment">Make an appointment</a></li>
+{% endblock %} {% block page_header %} {% endblock %} {% block content %}
+<!-- HOME -->
+<section id="home" class="slider" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row">
+      <div class="owl-carousel owl-theme">
+        <div class="item item-first">
+          <div class="caption">
+            <div class="col-md-offset-1 col-md-10">
+              <h3>We will make your life happier</h3>
+              <h1>Life without pain</h1>
+              <a href="#team" class="section-btn btn btn-blue smoothScroll"
+                >Meet ours physiotherapists</a
+              >
+            </div>
+          </div>
         </div>
-   </section>
-
-
-   <!-- ABOUT US -->
-   <section id="about">
-        <div class="container">
-             <div class="row">
-                  <div class="col-md-6 col-sm-6">
-                       <div class="about-info">
-                            <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Physio Activities</h2>
-                            <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                 <p>The Clinic of Physiotherapy and Sports Rehabilitation was established primarily
-                                      for the patient to whom we approach individually.</p>
-                                 <p>Thank you for your trust. We appreciate all positive feedback.</p>
-                                 <p>We invite you to use our services.</p>
-                            </div>
-                       </div>
-                  </div>
-             </div>
+        <div class="item item-second">
+          <div class="caption">
+            <div class="col-md-offset-1 col-md-10">
+              <h3>Effective and professional</h3>
+              <h1>Modern methods of treatment</h1>
+              <a
+                href="#about"
+                class="section-btn btn btn-default btn-gray smoothScroll"
+                >More About us</a
+              >
+            </div>
+          </div>
         </div>
-   </section>
-
-
-   <!-- OUR TEAM -->
-   <section id="team" data-stellar-background-ratio="1">
-        <div class="container">
-             <div class="row">
-
-                  <div class="col-md-6 col-sm-6">
-                          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                         <h2>Meet the Team</h2>
-                    </div>
-                  </div>  
-                  <div class="clearfix"></div>
-                  <div class="col-md-4 col-sm-6">
-                       <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                            <img src="{% static 'images/male-silhouette-head.jpg' %}" class="img-responsive" alt="">
-
-                            <div class="team-info">
-                                 <h3>Leandro De Araujo</h3>
-                                 <p>Clinical Lead Physiotherapist</p>
-                                 <div class="team-contact-info">
-                                      <p><i class="fa fa-phone"></i> 200-300-400</p>
-                                      <p><i class="fa fa-envelope-o"></i> <a
-                                                href="#">Leandro@physioactivities.com</a></p>
-                                 </div>
-                                 <ul class="social-icon">
-                                   <li><a target="Facebook" href="https://www.linkedin.com/"
-                                        rel="noopener noreferrer" class="fa fa-linkedin-square"></a></li>
-                                      <li><a target="Facebook" href="https://www.facebook.com"
-                                        rel="noopener noreferrer" class="fa fa-facebook-square"></a></li>
-                                        <li><a target="Facebook" href="https://twitter.com"
-                                        rel="noopener noreferrer" class="fa fa-twitter-square"></a></li>
-                                      <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                 </ul>
-                            </div>
-
-                       </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                       <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                            <img src="{% static 'images/female-silhouette1.jpg' %}" class="img-responsive" alt="">
-
-                            <div class="team-info">
-                                 <h3>Glaucia De Araujo</h3>
-                                 <p>BSc. Physio (Hons) M.I.S.C.P</p>
-                                 <div class="team-contact-info">
-                                      <p><i class="fa fa-phone"></i> 100-200-300</p>
-                                      <p><i class="fa fa-envelope-o"></i> <a href="#">glaucia@physioactivities.com</a></p>
-                                 </div>
-                                 <ul class="social-icon">
-                                   <li><a target="Linkedin" href="https://www.linkedin.com/"
-                                        rel="noopener noreferrer" class="fa fa-linkedin-square"></a></li>
-                                      <li><a target="Facebook" href="https://www.facebook.com"
-                                        rel="noopener noreferrer" class="fa fa-facebook-square"></a></li>
-                                        <li><a target="Twitter" href="https://twitter.com"
-                                        rel="noopener noreferrer" class="fa fa-twitter-square"></a></li>
-                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                 </ul>
-                            </div>
-
-                       </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                       <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                            <img src="{% static 'images/male-silhouette-head.jpg' %}" class="img-responsive" alt="">
-
-                            <div class="team-info">
-                                 <h3>Mark Stuart</h3>
-                                 <p>MSc.BSc, MISCP</p>
-                                 <div class="team-contact-info">
-                                      <p><i class="fa fa-phone"></i> 700-000-010</p>
-                                      <p><i class="fa fa-envelope-o"></i> <a
-                                                href="#">markstuart@physioactivities.com</a></p>
-                                 </div>
-                                 <ul class="social-icon">
-                                   <li><a target="Linkedin" href="https://www.linkedin.com/"
-                                        rel="noopener noreferrer" class="fa fa-linkedin-square"></a></li>
-                                      <li><a target="Facebook" href="https://www.facebook.com"
-                                        rel="noopener noreferrer" class="fa fa-facebook-square"></a></li>
-                                        <li><a target="Twitter" href="https://twitter.com"
-                                        rel="noopener noreferrer" class="fa fa-twitter-square"></a></li>
-                                      <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                 </ul>
-                            </div>
-
-                       </div>
-                  </div>
-
-             </div>
+        <div class="item item-third">
+          <div class="caption">
+            <div class="col-md-offset-1 col-md-10">
+              <h3>We will show you how to change your current lifestyle</h3>
+              <h1>A new way of life</h1>
+              <a
+                href="/appointment"
+                class="section-btn btn btn-default smoothScroll"
+                >Book Now!</a
+              >
+            </div>
+          </div>
         </div>
-   </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-   <!-- SERVICES -->
-   <section id="news" data-stellar-background-ratio="2.5">
-        <div class="container">
-             <div class="row">
-
-                  <div class="col-md-12 col-sm-12">
-                       <!-- SECTION TITLE -->
-                       <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                            <h2>Services</h2>
-                       </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                       <!-- NEWS THUMB -->
-                       <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="news-detail.html">
-                                 <img src="{% static 'images/manualtherapy.jpg' %}" class="img-responsive" alt="">
-                            </a>
-                            <div class="news-info">
-                                 <h3><a href="news-detail.html">Manual Therapy</a></h3>
-                                 <p>Manual therapy is a clinical approach utilizing skilled, specific hands-on techniques, including but not limited to, massage, manipulation or mobilization. It should not be so painful that the patient reacts by tensing up.</p>
-                                 <div class="author">
-                                      <img src="{% static 'images/woman-talking-on-a-phone.jpg' %}" class="img-responsive" alt="">
-                                      <div class="author-info">
-                                           <h6>"Leandro and Glaucia are very professional and extremely knowledgable.  I have enjoyed my time here.  I can do much more than I could before I had therapy and I would highly recommend you to a friend or family."</h6>
-                                           <p>Anne T.</p>
-                                      </div>
-                                      <a href="/appointment" class="section-btn btn btn-default smoothScroll">Book Now!</a>
-                                 </div>
-                            </div>
-                       </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                       <!-- NEWS THUMB -->
-                       <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="news-detail.html">
-                                 <img src="{% static 'images/dryneedling.jpg' %}" class="img-responsive" alt="">
-                            </a>
-                            <div class="news-info">
-                                 <h3><a href="news-detail.html">Dry Needling</a></h3>
-                                 <p>Effective deep muscle release therapy which relaxes knots in muscle tissue that can cause pain, weakness and tightness.</p>
-                                 <div class="author">
-                                      <img src="{% static 'images/mantalk.jpg' %}" class="img-responsive" alt="">
-                                      <div class="author-info">
-                                           <h6>"What brought me to dry needling were muscle spasms in my neck and shoulders. Dry needling has been the most effective."</h6>
-                                           <p>John C.</p>
-                                      </div>
-                                      <a href="/appointment" class="section-btn btn btn-default smoothScroll">Book Now!</a>
-                                 </div>
-                            </div>
-                       </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                       <!-- NEWS THUMB -->
-                       <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
-                            <a href="news-detail.html">
-                                 <img src="{% static 'images/shockwave_treatment.jpg' %}" class="img-responsive" alt="">
-                            </a>
-                            <div class="news-info">
-                                 <h3><a href="news-detail.html">Shockwave Therapy</a></h3>
-                                 <p>Shockwave therapy uses an acoustic wave as a means of transmitting energy to stimulate blood vessel and nerve growth thus helping heal and regenerate tissue. Shockwave therapy is an established and effective treatment for soft-tissue injuries. It is non-invasive and non-surgical.</p>
-                                 <div class="author"> 
-                                   <img src="{% static 'images/wT1.jpg' %}" class="img-responsive" alt="">
-                                     <div class="author-info">
-                                           <h6> "I had tried everything to help my heel pain
-                                             The shockwave therapy was my last resort for a normal life and I am glad to say that it has made a huge improvement to my every day foot pain and general well-being.""
-                                           </h6>
-                                           <p>Amanda J.</p>
-                                      </div>
-                                      <a href="/appointment" class="section-btn btn btn-default smoothScroll">Book Now!</a>
-                                 </div>
-                            </div>
-                       </div>
-                  </div>
-
-             </div>
+<!-- ABOUT US -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="about-info">
+          <h2 class="wow fadeInUp" data-wow-delay="0.6s">
+            Welcome to Physio Activities
+          </h2>
+          <div class="wow fadeInUp" data-wow-delay="0.8s">
+            <p>
+              The Clinic of Physiotherapy and Sports Rehabilitation was
+              established primarily for the patient to whom we approach
+              individually.
+            </p>
+            <p>
+              Thank you for your trust. We appreciate all positive feedback.
+            </p>
+            <p>We invite you to use our services.</p>
+          </div>
         </div>
-   </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-   <!-- CONTACT FORM -->
-   <section id="contact" data-stellar-background-ratio="3">
-        <div class="container">
-             <div class="row">
-
-                  <div class="col-md-6 col-sm-6">
-                       <img src="{% static 'images/home1.jpg' %}" class="img-responsive" alt="">
-                  </div>
-
-                  <div class="col-md-6 col-sm-6">
-                       <!-- CONTACT FORM HERE -->
-                       <form id="appointment-form" method="post" action="#">
-                          <!-- SECTION TITLE -->
-                            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                 <h2>Contact Us</h2>
-                            </div>
-
-                            <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                 <div class="col-md-6 col-sm-6">
-                                      <label for="firstname">First name and last name</label>
-                                      <input type="text" class="form-control" id="firstname" name="firstname"
-                                           placeholder="First name and last name">
-                                 </div>
-
-                                 <div class="col-md-6 col-sm-6">
-                                      <label for="physiotherapist">Choose a physiotherapist</label>
-                                      <select id="physiotherapist" name="physiotherapist" class="form-control">
-                                           <option>Leandro De Araujo</option>
-                                           <option>Glaucia De Araujo</option>
-                                           <option>Rodrigo Sodano</option>
-                                      </select>
-                                 </div>
-
-                                 <div class="col-md-12 col-sm-12">
-                                      <label for="telephone">Phone number</label>
-                                      <input type="tel" class="form-control" id="telephone" name="telephone"
-                                           placeholder="Your phone number">
-                                      <label for="message">Message</label>
-                                      <textarea class="form-control" rows="5" id="message" name="message"
-                                           placeholder="Comments"></textarea>
-                                      <button type="submit" class="form-control" id="cf-submit"
-                                           name="submit">Send</button>
-                                 </div>
-                            </div>
-                       </form>
-                  </div>
-
-             </div>
+<!-- OUR TEAM -->
+<section id="team" data-stellar-background-ratio="1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>Meet the Team</h2>
         </div>
-   </section>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+          <img
+            src="{% static 'images/male-silhouette-head.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
 
+          <div class="team-info">
+            <h3>Leandro De Araujo</h3>
+            <p>Clinical Lead Physiotherapist</p>
+            <div class="team-contact-info">
+              <p><i class="fa fa-phone"></i> 200-300-400</p>
+              <p>
+                <i class="fa fa-envelope-o"></i>
+                <a href="#">Leandro@physioactivities.com</a>
+              </p>
+            </div>
+            <ul class="social-icon">
+              <li>
+                <a
+                  target="Facebook"
+                  href="https://www.linkedin.com/"
+                  rel="noopener noreferrer"
+                  class="fa fa-linkedin-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="Facebook"
+                  href="https://www.facebook.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-facebook-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="Facebook"
+                  href="https://twitter.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-twitter-square"
+                ></a>
+              </li>
+              <li><a href="#" class="fa fa-envelope-o"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-   <!-- LOCATION - GOOGLE MAP -->
-   <section id="google-map">
-        <h6 style="display: none;">&nbsp;</h6>
-        <!-- How to change your own map point
+      <div class="col-md-4 col-sm-6">
+        <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+          <img
+            src="{% static 'images/female-silhouette1.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+
+          <div class="team-info">
+            <h3>Glaucia De Araujo</h3>
+            <p>BSc. Physio (Hons) M.I.S.C.P</p>
+            <div class="team-contact-info">
+              <p><i class="fa fa-phone"></i> 100-200-300</p>
+              <p>
+                <i class="fa fa-envelope-o"></i>
+                <a href="#">glaucia@physioactivities.com</a>
+              </p>
+            </div>
+            <ul class="social-icon">
+              <li>
+                <a
+                  target="Linkedin"
+                  href="https://www.linkedin.com/"
+                  rel="noopener noreferrer"
+                  class="fa fa-linkedin-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="Facebook"
+                  href="https://www.facebook.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-facebook-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="Twitter"
+                  href="https://twitter.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-twitter-square"
+                ></a>
+              </li>
+              <li><a href="#" class="fa fa-envelope-o"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+          <img
+            src="{% static 'images/male-silhouette-head.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+
+          <div class="team-info">
+            <h3>Mark Stuart</h3>
+            <p>MSc.BSc, MISCP</p>
+            <div class="team-contact-info">
+              <p><i class="fa fa-phone"></i> 700-000-010</p>
+              <p>
+                <i class="fa fa-envelope-o"></i>
+                <a href="#">markstuart@physioactivities.com</a>
+              </p>
+            </div>
+            <ul class="social-icon">
+              <li>
+                <a
+                  target="Linkedin"
+                  href="https://www.linkedin.com/"
+                  rel="noopener noreferrer"
+                  class="fa fa-linkedin-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="Facebook"
+                  href="https://www.facebook.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-facebook-square"
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="Twitter"
+                  href="https://twitter.com"
+                  rel="noopener noreferrer"
+                  class="fa fa-twitter-square"
+                ></a>
+              </li>
+              <li><a href="#" class="fa fa-envelope-o"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="news" data-stellar-background-ratio="2.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <!-- SECTION TITLE -->
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>Services</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- NEWS THUMB -->
+        <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+          <a href="news-detail.html">
+            <img
+              src="{% static 'images/manualtherapy.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </a>
+          <div class="news-info">
+            <h3><a href="news-detail.html">Manual Therapy</a></h3>
+            <p>
+              Manual therapy is a clinical approach utilizing skilled, specific
+              hands-on techniques, including but not limited to, massage,
+              manipulation or mobilization. It should not be so painful that the
+              patient reacts by tensing up.
+            </p>
+            <div class="author">
+              <img
+                src="{% static 'images/woman-talking-on-a-phone.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="author-info">
+                <h6>
+                  "Leandro and Glaucia are very professional and extremely
+                  knowledgable. I have enjoyed my time here. I can do much more
+                  than I could before I had therapy and I would highly recommend
+                  you to a friend or family."
+                </h6>
+                <p>Anne T.</p>
+              </div>
+              <a
+                href="/appointment"
+                class="section-btn btn btn-default smoothScroll"
+                >Book Now!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- NEWS THUMB -->
+        <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+          <a href="news-detail.html">
+            <img
+              src="{% static 'images/dryneedling.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </a>
+          <div class="news-info">
+            <h3><a href="news-detail.html">Dry Needling</a></h3>
+            <p>
+              Effective deep muscle release therapy which relaxes knots in
+              muscle tissue that can cause pain, weakness and tightness.
+            </p>
+            <div class="author">
+              <img
+                src="{% static 'images/mantalk.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="author-info">
+                <h6>
+                  "What brought me to dry needling were muscle spasms in my neck
+                  and shoulders. Dry needling has been the most effective."
+                </h6>
+                <p>John C.</p>
+              </div>
+              <a
+                href="/appointment"
+                class="section-btn btn btn-default smoothScroll"
+                >Book Now!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- NEWS THUMB -->
+        <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+          <a href="news-detail.html">
+            <img
+              src="{% static 'images/shockwave_treatment.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </a>
+          <div class="news-info">
+            <h3><a href="news-detail.html">Shockwave Therapy</a></h3>
+            <p>
+              Shockwave therapy uses an acoustic wave as a means of transmitting
+              energy to stimulate blood vessel and nerve growth thus helping
+              heal and regenerate tissue. Shockwave therapy is an established
+              and effective treatment for soft-tissue injuries. It is
+              non-invasive and non-surgical.
+            </p>
+            <div class="author">
+              <img
+                src="{% static 'images/wT1.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="author-info">
+                <h6>
+                  "I had tried everything to help my heel pain The shockwave
+                  therapy was my last resort for a normal life and I am glad to
+                  say that it has made a huge improvement to my every day foot
+                  pain and general well-being.""
+                </h6>
+                <p>Amanda J.</p>
+              </div>
+              <a
+                href="/appointment"
+                class="section-btn btn btn-default smoothScroll"
+                >Book Now!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" data-stellar-background-ratio="3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <img
+          src="{% static 'images/home1.jpg' %}"
+          class="img-responsive"
+          alt=""
+        />
+      </div>
+
+      <div class="col-md-6 col-sm-6">
+        <!-- CONTACT FORM HERE -->
+        <form id="appointment-form" method="post" action="#">
+          <!-- SECTION TITLE -->
+          <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+            <h2>Contact Us</h2>
+          </div>
+
+          <div class="wow fadeInUp" data-wow-delay="0.8s">
+            <div class="col-md-6 col-sm-6">
+              <label for="firstname">First name and last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="firstname"
+                placeholder="First name and last name"
+              />
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <label for="physiotherapist">Choose a physiotherapist</label>
+              <select
+                id="physiotherapist"
+                name="physiotherapist"
+                class="form-control"
+              >
+                <option>Leandro De Araujo</option>
+                <option>Glaucia De Araujo</option>
+                <option>Rodrigo Sodano</option>
+              </select>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+              <label for="telephone">Phone number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="telephone"
+                name="telephone"
+                placeholder="Your phone number"
+              />
+              <label for="message">Message</label>
+              <textarea
+                class="form-control"
+                rows="5"
+                id="message"
+                name="message"
+                placeholder="Comments"
+              ></textarea>
+              <button
+                type="submit"
+                class="form-control"
+                id="cf-submit"
+                name="submit"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION - GOOGLE MAP -->
+<section id="google-map">
+  <h6 style="display: none">&nbsp;</h6>
+  <!-- How to change your own map point
           1. Go to Google Maps
         -->
-        <iframe
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.267121867944!2d-6.043053384175349!3d52.97959717990377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867b0cb4415677b%3A0x26c6d36061c9249a!2sTearmann%2C%201%20High%20St%2C%20Wicklow%2C%20A67%20DK44!5e0!3m2!1sen!2sie!4v1640895612878!5m2!1sen!2sie"
-             height="350" style="border:0; width:100%" allowfullscreen></iframe>
-   </section>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.267121867944!2d-6.043053384175349!3d52.97959717990377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867b0cb4415677b%3A0x26c6d36061c9249a!2sTearmann%2C%201%20High%20St%2C%20Wicklow%2C%20A67%20DK44!5e0!3m2!1sen!2sie!4v1640895612878!5m2!1sen!2sie"
+    height="350"
+    style="border: 0; width: 100%"
+    allowfullscreen
+  ></iframe>
+</section>
 {% endblock %}
