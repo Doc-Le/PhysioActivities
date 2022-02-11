@@ -117,7 +117,7 @@ This idea originally came up first as I'm a Senior Physiotherapist working in th
 5. [GitHub](https://github.com/Doc-Le/PhysioActivities.git)
     * GitHub is used to store the project after being pushed from Git 
 6. [Heroku](https://dashboard.heroku.com)
-    * GitHub is used to store the project after being pushed from Git  
+    * For deploying the application 
 7. [Stellar.js v0.6.2 ](http://markdalgleish.com/projects/stellar.js)
     
 8. [jQuery](https://jquery.com/)
