@@ -5,7 +5,7 @@ Demo - See live: https://physioactivities.herokuapp.com
 ## Logo
 #
 
-![Alt](static\images\logo-225x45.png)
+![Alt](images\logo-225x45.png)
 #
 
 ## Intro
