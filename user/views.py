@@ -17,20 +17,21 @@ def index(request):
     context = {'profile': profile}
     return render(request, 'user_profile.html', context)
 
+
 def login_form(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
     if user is not None:
-            login(request, user)
-            current_user = request.user
-            userprofile = UserProfile.objects.get(user_id=current_user.id)
-            # Redirect to a success page.
-            return HttpResponseRedirect('/')
+        login(request, user)
+        current_user = request.user
+        userprofile = UserProfile.objects.get(user_id=current_user.id)
+        # Redirect to a success page.
+        return HttpResponseRedirect('/')
     else:
-            messages.warning(request, "Login Error !! Username or Password is incorrect")
-            return HttpResponseRedirect('/login')
+        messages.warning(request, "Login Error !! Username or Password is incorrect")
+        return HttpResponseRedirect('/login')
     context = {}
     return render(request, 'login_form.html', context)
 
@@ -86,6 +87,7 @@ def user_update(request):
         }
         return render(request, 'user_update.html', context)
 
+
 @login_required(login_url='/login')
 def user_password(request):
     if request.method == 'POST':
@@ -103,7 +105,3 @@ def user_password(request):
         return render(request, 'user_password.html', {
             'form': form
         })
-                  
-
-
-
