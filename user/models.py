@@ -11,4 +11,3 @@ class UserProfile(models.Model):
 
     def user_name(self):
         return self.user.first_name + ' ' + self.user.last_name + ' [' + self.user.username + '] '
-   
