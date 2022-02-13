@@ -40,7 +40,6 @@ def logout_func(request):
     logout(request)
     return HttpResponseRedirect('/')
 
-
 def signup_form(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
