@@ -5,13 +5,13 @@ Demo - See live: https://physioactivities.herokuapp.com
 ## Logo
 #
 
-![Alt](images\logo-225x45.png)
+![Alt](static\images\logo-225x45.png)
 #
 
 ## Intro
 #
 
-This idea originally came up first as I'm a Senior Physiotherapist working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
+This idea originally came up at first as I've been working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
 #
 
 ## User Experience (UX)
