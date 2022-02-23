@@ -31,4 +31,31 @@
             <!-- Used to display form errors -->
             <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
         </fieldset>  
-       
+        <div class="form-check form-check-inline float-right mr-0">
+          {% if user.is_authenticated %}
+              <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+          {% else %}
+              <label class="form-check-label" for="id-save-info">
+                  <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                  <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+              </label>
+          {% endif %}
+      </div>  
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
+          <div class="col-md-6 col-sm-6">
+            <a href="../" role="button" class="btn btn-default btn-back">
+              <i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% csrf_token %}
+  </form>
+</div>
+</section>
+
+{% endblock %}
+
