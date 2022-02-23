@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block menu_links %}
+     <li><a href="../" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
+{% endblock %}
+ 
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+
+<!-- CHECKOUT -->
+<section id="wizard" data-stellar-background-ratio="3">
+  <div class="container">
+    <form id="appointment-form">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+            <h2>Checkout</h2>
+          </div>
+      <fieldset class="px-3">
+            <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+            <!-- A Stripe card element will go here -->
+            <div class="mb-3" id="card-element"></div>
+
+            <!-- Used to display form errors -->
+            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+        </fieldset>  
+       
