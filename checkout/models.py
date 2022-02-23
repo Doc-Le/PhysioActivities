@@ -1,14 +1,26 @@
 from django.db import models
+from django.db.models import Sum
+from django.conf import settings
+
+from appointment.models import Appointment
 
 class Order(models.Model):
-    #first_name = models.CharField(max_length=50)
-    #last_name = models.CharField(max_length=50)
-    #gender = models.CharField(max_length=10, null=True, blank=True)
-    #phone = models.CharField(max_length=10)
-    #email = models.CharField(max_length=100)
-    location = models.ForeignKey('Location', null=True, blank=True, on_delete=models.SET_NULL)
-    service = models.ForeignKey('Service', null=True, blank=True, on_delete=models.SET_NULL)
-    resource = models.ForeignKey('Resource', null=True, blank=True, on_delete=models.SET_NULL)
-    date = models.ForeignKey('CalendarDate', null=True, blank=True, on_delete=models.SET_NULL)
-    time = models.ForeignKey('CalendarTime', null=True, blank=True, on_delete=models.SET_NULL)
-    paid = models.BooleanField(default=False, null=True, blank=True)
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = models.CharField(max_length=40, null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    
+    
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    product = models.ForeignKey(Appointment, null=False, blank=False, on_delete=models.CASCADE)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)   
