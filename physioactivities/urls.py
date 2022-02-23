@@ -30,4 +30,5 @@ urlpatterns = [
     path('create-payment-intent/<pk>/', StripeIntentView.as_view(), name='create-payment-intent'),
     path('services/<int:resource_id>/', get_services, name='get_services'),
     path('times/<int:date_id>/', get_times, name='get_times'),
+    path('checkout/', include('checkout.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
