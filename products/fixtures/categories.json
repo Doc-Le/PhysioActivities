@@ -1,0 +1,24 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "Leandro De Araujo"
+     }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "Glaucia De Araujo"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "Mark Stuart"
+      }
+    }
+    
+  ]
