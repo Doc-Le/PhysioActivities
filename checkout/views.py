@@ -12,7 +12,7 @@ def checkout(request):
     
     Appointment = request.session.get('appointment', {})
     if not Appointment:
-        messages.error(request, "There is no appoiment scheduled at moment")
+        messages.error(request, "There is no appoiment schedules")
         return redirect(reverse('appointment'))
 
     order_form = OrderForm()
