@@ -1,26 +1,43 @@
 [
     {
-        "pk": 1,
-        "model": "products.product",
-        "fields": {
-            "name": "Manual Therapy",
-            "price": 75.00
-        }
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340155",
+        "name": "activewear",
+        "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+        "price": 53.99,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "DP0709201205510679M.jpg"
+      }
     },
     {
-        "pk": 2,
-        "model": "products.product",
-        "fields": {
-            "name": "Dry Needling",
-            "price": 80.00
-        }
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001600425",
+        "name": "Liz Claiborne Audra Classic Fit Straight Leg Pants",
+        "description": "Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+        "price": 58.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "DP0113201617034987M.jpg"
+      }
     },
     {
-        "pk": 3,
-        "model": "products.product",
-        "fields": {
-            "name": "Shockwave Therapy",
-            "price": 90.00
-        }
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001730010",
+        "name": "clearance",
+        "price": 205.99,
+        "category": 3,
+        "rating": 4.7,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "DP1230201417013175M.jpg"
+      }
     }
 ]
