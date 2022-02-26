@@ -18,7 +18,7 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 Wireframes were created on Balsamiq (see links below)
 
-<<<<<<< HEAD
+
 * [Mobile](/static/wireframe/)
 * [Tablet](/static/wireframe/)
 * [Desktop](/static/wireframe/)
@@ -58,7 +58,7 @@ Wireframes were created on Balsamiq (see links below)
 
   ## Current features 
 
--   [Responsive on all device sizes](static\responsive\responsivepa.png)
+-   [Responsive on all device sizes](responsive\responsivepa.png)
 
 -   Accessible. 
 
@@ -84,13 +84,8 @@ Wireframes were created on Balsamiq (see links below)
 
 #### Features to implement in the future
 
-<<<<<<< HEAD
 - to be able to send eductional material.
 - To be able to find a physio with a physio finder.
-=======
-- To be able to select one of their saved addresses to prefill the checkout form. I knew I wanted user to be able to save multiple addresses incase sending as a gift etc, so I've started the groundwork. But generally users billing and delivery addresses are the same and thats what they'll mostly use and so not a priority for initial launch.
-- To be able to change Vinyl default image from frontend rather than having to go into admin panel. Decided this wasn't a priority as more often than not the default image would be the front of the record so you really wouldn't want to change it unless you accidentally uploaded the wrong image but thats why I added the image previews for file input fields.
->>>>>>> 67de5bbad048b243c7a153d6eb5ae936665a1717
 - Would like to add patients reviews.
 
 
