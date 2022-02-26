@@ -18,6 +18,9 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 ### User stories
 
+https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4
+
+
 #### First Time Visitor Goals
 
 * As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about what the clinic and the clinician have to offer.
