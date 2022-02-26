@@ -9,10 +9,21 @@ Demo - See live: https://physioactivities.herokuapp.com
 </div>
 
 ## Intro
-#
+
 
 This idea originally came up at first as I've been working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
-#
+
+
+## Wireframe
+
+Wireframes were created on Balsamiq (see links below)
+
+* [Mobile](/static/readme_assets/wireframes/ms4-mobile.pdf)
+* [Tablet](/static/readme_assets/wireframes/ms4-tablet.pdf)
+* [Desktop](/static/readme_assets/wireframes/ms4-desktop.pdf)
+
+
+
 
 ## User Experience (UX)
 
@@ -36,12 +47,12 @@ This idea originally came up at first as I've been working in the field for 19 y
 * As a Returning Visitor, I want to find easy access for bookings and payments.
 
 ## Goals
-#
+
 
  * Create a user-friendly, well-designed website easily understood 
  * Create a registration form that stores information about users in a database in an organized fashion. 
  * Create a login system so that the user has to log in to make an appointment. 
- * Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them  and see if the chosen clinician has availability. 
+ * Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them  and see if the chosen clinician has   availability. 
  * Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
  * Have information about the location of the physiotherapist. 
  * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
@@ -79,9 +90,9 @@ This idea originally came up at first as I've been working in the field for 19 y
 - To be able to change Vinyl default image from frontend rather than having to go into admin panel. Decided this wasn't a priority as more often than not the default image would be the front of the record so you really wouldn't want to change it unless you accidentally uploaded the wrong image but thats why I added the image previews for file input fields.
 - Would like to add patients reviews.
 
-#
+
 ## Design 
-#
+
 
   * Color Scheme
      The two main colors used are green and white.
@@ -94,13 +105,10 @@ This idea originally came up at first as I've been working in the field for 19 y
   * Imagery
     Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
-#
-## Wireframe
-#
 
 
 ## Tech used
-#
+
 
 * HTML
 * CSS
@@ -113,7 +121,7 @@ This idea originally came up at first as I've been working in the field for 19 y
 #
 
 ## Frameworks, Libraries & database
-#
+
 1. [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     * Bootstrap was used Stores CSS Bootstrap library files
 2. [Django](https://www.djangoproject.com/)
@@ -142,21 +150,21 @@ This idea originally came up at first as I've been working in the field for 19 y
 13. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
     - Used to generate secret key
             
-#
+
 
 ## Testing
-#
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 W3C Markup Validator - Results (link)
 Testing User Stories from User Experience Section
 
-#
+
 ## Further Testing
-#
+
 This app was tested on Google Chrome, Microsoft Edge, and Safari browsers
 This app was viewed on a variety of devices such as Desktop, Laptop, IPhone7, IPhone8
-#
+
 ## Stripe 
 #
 ### Accept payments with Stripe Checkout
@@ -168,9 +176,9 @@ Once the customer choose the clinician/date/time and is ready to pay, use Stripe
 
 The demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
 
-#
+
 ## Deployment
-#
+
 The project was deployed to GitHub Pages using the following steps:
 
 * Log in to GitHub and locate the GitHub Repository
