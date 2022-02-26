@@ -18,14 +18,6 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 ### User stories
 
-<div align="center">
-  
-  
-  
-</div>
-
-, https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4
-
 
 #### First Time Visitor Goals
 
@@ -81,6 +73,13 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 -   Confirmation email on registration and on successful purchase.
 
+#### Features to implement in the future
+
+- To be able to select one of their saved addresses to prefill the checkout form. I knew I wanted user to be able to save multiple addresses incase sending as a gift etc, so I've started the groundwork. But generally users billing and delivery addresses are the same and thats what they'll mostly use and so not a priority for initial launch.
+- To be able to change Vinyl default image from frontend rather than having to go into admin panel. Decided this wasn't a priority as more often than not the default image would be the front of the record so you really wouldn't want to change it unless you accidentally uploaded the wrong image but thats why I added the image previews for file input fields.
+- Would like to add patients reviews.
+
+#
 ## Design 
 #
 
@@ -144,17 +143,6 @@ This idea originally came up at first as I've been working in the field for 19 y
     - Used to generate secret key
             
 #
-## Features
-#
-The easy navigation bar and at key places throughout the design.
-About us page with introductory information.
-Meet the team segment that presents each member of the team.
-Services page detailing each technique with a client comment.
-Make an appointment button that takes the user to log in or sign-up.
-User Easy access to the booking system, choose the type of service, clinician, time, and date.
-Online payment with a credit card.
-#
-
 
 ## Testing
 #
