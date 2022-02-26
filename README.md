@@ -2,21 +2,33 @@
 
 Demo - See live: https://physioactivities.herokuapp.com
 
-## Logo
-#
-
-![Alt](static\images\logo-225x45.png)
-#
+<div align="center">
+  
+  ![PhysioAct](https://user-images.githubusercontent.com/76841050/155844125-75cb60e1-134e-4e2e-b2b9-59685902ee0c.gif)
+  
+</div>
 
 ## Intro
-#
+
 
 This idea originally came up at first as I've been working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
-#
+
+
+## Wireframe
+
+Wireframes were created on Balsamiq (see links below)
+
+* [Mobile](/static/wireframe/)
+* [Tablet](/static/wireframe/)
+* [Desktop](/static/wirefram/)
+
+
+
 
 ## User Experience (UX)
 
 ### User stories
+
 
 #### First Time Visitor Goals
 
@@ -24,7 +36,7 @@ This idea originally came up at first as I've been working in the field for 19 y
 * As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
 * As a First Time Visitor, I want to look for information to understand what each treatment technique has to offer. 
 * As a First Time Visitor, I  also want to locate his social media links to see their followings on social media to determine how trusted and known the company is.
-*  As a First Time Visitor, I want to easily schedule an appointment and pay. 
+* As a First Time Visitor, I want to easily schedule an appointment and pay. 
 
 ### Returning Visitor Goals
 
@@ -35,12 +47,12 @@ This idea originally came up at first as I've been working in the field for 19 y
 * As a Returning Visitor, I want to find easy access for bookings and payments.
 
 ## Goals
-#
+
 
  * Create a user-friendly, well-designed website easily understood 
  * Create a registration form that stores information about users in a database in an organized fashion. 
  * Create a login system so that the user has to log in to make an appointment. 
- * Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them  and see if the chosen clinician has availability. 
+ * Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them  and see if the chosen clinician has   availability. 
  * Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
  * Have information about the location of the physiotherapist. 
  * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
@@ -48,15 +60,15 @@ This idea originally came up at first as I've been working in the field for 19 y
 
   ## Current features 
 
--   Responsive on all device sizes
+-   [Responsive on all device sizes](static\responsive\responsivepa.png)
 
--   Accessible 
+-   Accessible. 
 
--   Easy to navigate (Single use learning)
+-   Easy to navigate (Single use learning).
 
--   Interactive elements
+-   Interactive elements.
 
--   Social Links 
+-   Social Links.
 
 -   Ability to contact the clinic via contact page.
 
@@ -66,14 +78,21 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 -   Logged in users can their previous and future appointments.
 
--   Logged in user can save their addresses and default address, pre-fills Checkout form
+-   Logged in user can save their addresses and default address, pre-fills Checkout form.
 
 -   Admin user can add, edit and delete any event.
 
 -   Confirmation email on registration and on successful purchase.
 
+#### Features to implement in the future
+
+- to be able to send eductional material.
+- To be able to find a physio with a physio finder.
+- Would like to add patients reviews.
+
+
 ## Design 
-#
+
 
   * Color Scheme
      The two main colors used are green and white.
@@ -86,13 +105,10 @@ This idea originally came up at first as I've been working in the field for 19 y
   * Imagery
     Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
-#
-## Wireframe
-#
 
 
 ## Tech used
-#
+
 
 * HTML
 * CSS
@@ -105,7 +121,7 @@ This idea originally came up at first as I've been working in the field for 19 y
 #
 
 ## Frameworks, Libraries & database
-#
+
 1. [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     * Bootstrap was used Stores CSS Bootstrap library files
 2. [Django](https://www.djangoproject.com/)
@@ -134,32 +150,21 @@ This idea originally came up at first as I've been working in the field for 19 y
 13. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
     - Used to generate secret key
             
-#
-## Features
-#
-The easy navigation bar and at key places throughout the design.
-About us page with introductory information.
-Meet the team segment that presents each member of the team.
-Services page detailing each technique with a client comment.
-Make an appointment button that takes the user to log in or sign-up.
-User Easy access to the booking system, choose the type of service, clinician, time, and date.
-Online payment with a credit card.
-#
 
 
 ## Testing
-#
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 W3C Markup Validator - Results (link)
 Testing User Stories from User Experience Section
 
-#
+
 ## Further Testing
-#
+
 This app was tested on Google Chrome, Microsoft Edge, and Safari browsers
 This app was viewed on a variety of devices such as Desktop, Laptop, IPhone7, IPhone8
-#
+
 ## Stripe 
 #
 ### Accept payments with Stripe Checkout
@@ -171,9 +176,9 @@ Once the customer choose the clinician/date/time and is ready to pay, use Stripe
 
 The demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
 
-#
+
 ## Deployment
-#
+
 The project was deployed to GitHub Pages using the following steps:
 
 * Log in to GitHub and locate the GitHub Repository
