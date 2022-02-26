@@ -18,7 +18,14 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 ### User stories
 
-https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4, https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4
+<div align="center">
+  
+  <img height="170em" src="https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4"/>
+  <img height="170em" src="https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4"/>
+  
+</div>
+
+, https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4
 
 
 #### First Time Visitor Goals
