@@ -2,11 +2,11 @@
 
 Demo - See live: https://physioactivities.herokuapp.com
 
-## Logo
-#
-
-![Alt](static\images\logo-225x45.png)
-#
+<div align="center">
+  
+  ![PhysioAct](https://user-images.githubusercontent.com/76841050/155844125-75cb60e1-134e-4e2e-b2b9-59685902ee0c.gif)
+  
+</div>
 
 ## Intro
 #
@@ -20,8 +20,7 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 <div align="center">
   
-  < src="https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4"/>
-  <isrc="https://user-images.githubusercontent.com/76841050/155841738-632ae234-7bf0-4937-9686-c4d8e61d44bb.mp4"/>
+  
   
 </div>
 
