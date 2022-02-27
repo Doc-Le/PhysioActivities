@@ -1,0 +1,35 @@
+[
+    {
+      "pk": 1,
+      "model": "services.service",
+      "fields": {
+        "sku": "01",
+        "name": "Manual therapy",
+        "description": "Manual therapy, 45 min appointment",
+        "price": 75.00,
+        "category": 1
+        }
+    },
+    {
+      "pk": 2,
+      "model": "services.service",
+      "fields": {
+        "sku": "02",
+        "name": "Dry Needling",
+        "description": "Dry Needling\" 30 min appointment",
+        "price": 80.00,
+        "category": 2
+      }
+    },
+    {
+      "pk": 3,
+      "model": "services.service",
+      "fields": {
+        "sku": "03",
+        "name": "Shockwave therapy",
+        "description": "Shockwave therapy\" 30 min appointment",
+        "price": 90.00,
+        "category": 3
+        }
+    }
+]
