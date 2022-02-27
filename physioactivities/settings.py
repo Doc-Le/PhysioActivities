@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'home',
     'appointment',
     'user',
-    'products',
-    'checkout',
+    'services',
+    'bookings',
     # Other
     'storages',
     'crispy_forms',
