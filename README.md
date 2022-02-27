@@ -13,16 +13,23 @@ Demo - See live: https://physioactivities.herokuapp.com
 
 This idea originally came up at first as I've been working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
 
-
+#
 ## Wireframe
 
-Wireframes were created on Balsamiq (see links below)
 
+| Page | Desktop | Tablet | Mobile |
+| ---- | ------- | ------ | ------ |
+|Home|[view](https://github)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_tablet.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_mobile_.png)|
+|About us|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signin_form.pngg)|[view](https://doc-le.github.io/Project-Milestone-1/assets/wireframe/tablet/projects.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signformtablet.png)|
+|Meet the Team|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/logged-in.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin_mobile_1.png)|
+|Services|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_tablet_.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_results_mobile_1_1.png)|
+|Contact|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Login/Logout|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Sign-up|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Make an appointment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Payment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
 
-* [Mobile](/static/wireframe/)
-* [Tablet](/static/wireframe/)
-* [Desktop](/static/wireframe/)
-
+#
 ## User Experience (UX)
 
 ### User stories
@@ -36,13 +43,17 @@ Wireframes were created on Balsamiq (see links below)
 * As a First Time Visitor, I  also want to locate his social media links to see their followings on social media to determine how trusted and known the company is.
 * As a First Time Visitor, I want to easily schedule an appointment and pay. 
 
+
+
 ### Returning Visitor Goals
+
 
 * As a Returning Visitor, I want to find information about what the clinic has to offer.
 * As a Returning Visitor, I want to find information about what kind of service is provided.
 * As a Returning Visitor, I want to find information and reviews about the clinicians.
 * As a Returning Visitor, I want to find information about the type of techniques.
 * As a Returning Visitor, I want to find easy access for bookings and payments.
+
 
 ## Goals
 
@@ -56,9 +67,10 @@ Wireframes were created on Balsamiq (see links below)
  * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
 
 
-  ## Current features 
 
--   [Responsive on all device sizes](responsive\responsivepa.png)
+## Current features 
+
+-   Responsive on all device sizes  [Click here!](https://github.com/Doc-Le/PhysioActivities/blob/main/static/responsive/responsivepa.png)
 
 -   Accessible. 
 
@@ -89,12 +101,13 @@ Wireframes were created on Balsamiq (see links below)
 - Would like to add patients reviews.
 
 
+
 ## Design 
 
-
   * Color Scheme
-     The two main colors used are green and white.
-     Picked these colors idea from a healthy three that symbolized heath. These colors create a set feel of the site.
+    The two main colors used are green and white.
+    Picked these colors idea from a healthy three that symbolized heath. GREEN. Balance
+    Positive: Harmony, balance, refreshment, universal love, rest, restoration, reassurance, environmental awareness, equilibrium, peace.
 
   * Typography
     Used [Google Fonts](https://fonts.google.com/) to import the fonts used for this site.
@@ -148,8 +161,7 @@ Wireframes were created on Balsamiq (see links below)
 13. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
     - Used to generate secret key
             
-
-
+#
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -162,6 +174,7 @@ Testing User Stories from User Experience Section
 
 This app was tested on Google Chrome, Microsoft Edge, and Safari browsers
 This app was viewed on a variety of devices such as Desktop, Laptop, IPhone7, IPhone8
+#
 
 ## Stripe 
 #
@@ -174,7 +187,7 @@ Once the customer choose the clinician/date/time and is ready to pay, use Stripe
 
 The demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
 
-
+#
 ## Deployment
 
 The project was deployed to GitHub Pages using the following steps:
@@ -247,13 +260,19 @@ $ python manage.py migrate
 ```#!/bin/sh
 $ python manage.py runserver
 ```
-
+#
 ## Content
 
 All content was written by the developer
 
-
+#
 ## Media
 
 * Logo custom made by the developer with Adobe Illustrator
 * All images found [Image: wutzkoh / stock.adobe.com]
+#
+## Acknowledgements
+
+-   Code Institute and Tim Nelson for task manager walk through project. 
+-   My mentor Rodrigo Sodano his time and feedback.
+-   The slack community.
