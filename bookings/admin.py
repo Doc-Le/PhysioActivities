@@ -1,14 +1,20 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, Booking
 
 
-class OrderLineItemAdminInline(admin.TabularInline):
-    model = OrderLineItem
-    readonly_fields = ('lineitem_total',)
+class BookingAdmin(admin.TabularInline):
+    model = Booking
 
+    fields = ('datetime', 'service', 'clinician', 'total',)
+    
+    readonly_fields = ('total',)
+    
+    list_display = ('datetime', 'service', 'clinician', 'total',)
+
+    ordering = ('-datetime',)
 
 class OrderAdmin(admin.ModelAdmin):
-    inlines = (OrderLineItemAdminInline,)
+    inlines = (BookingAdmin,)
 
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
@@ -26,4 +32,5 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+admin.site.register(Booking)
 admin.site.register(Order, OrderAdmin)
