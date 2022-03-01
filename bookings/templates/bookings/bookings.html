@@ -23,6 +23,92 @@
           <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
             <h2>Appointment</h2>
           </div>
+          <div class="wow fadeInUp" data-wow-delay="0.8s">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label for="firstNameField">First Name</label>
+                <input type="text" id="firstNameField" class="form-control" placeholder="First Name" />
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label for="lastNameField">Last Name</label>
+                <input type="text" id="lastNameField" class="form-control" placeholder="Last Name" />
+              </div>
+            </div>            
+            <div class="col-md-3 col-sm-6">
+              <div class="form-group">
+                <label for="genderField">Gender</label>
+                <select id="genderField" class="form-control">
+                  <option>None</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="form-group">
+                <label for="phoneField">Phone / Mobile No. </label>
+                <input type="text" id="phoneField" class="form-control" placeholder="Phone / Mobile  No." />
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label for="emailField">E-mail</label>
+                <input type="email" id="emailField" class="form-control" placeholder="E-mail" />
+              </div>
+            </div>            
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label for="locationField">Choose Location</label>
+                <select id="locationField" class="form-control">
+                  {% for location in locations %}
+                  <option value="{{ location.id }}">{{ location.name }}, {{ location.address }}, {{ location.city }}, {{ location.postcode }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label for="resourceField">Choose Clinician</label>
+                <select id="resourceField" class="form-control">
+                  <option value="">...</option>
+                  {% for resource in resources %}
+                  <option value="{{ resource.id }}">{{ resource.first_name }} {{ resource.last_name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label for="serviceField">Choose Service</label>
+                <select id="serviceField" class="form-control">
+                  <option value="">...</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">             
+              <div class="form-group">
+                <label for="dateField">Choose the date of your visit</label>
+                <select id="dateField" class="form-control">
+                  <option value="">...</option>
+                  {% for calendarDate in calendarDates %}
+                  <option value="{{ calendarDate.id }}">{{ calendarDate }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="form-group">
+                <label for="select">Choose the time</label>
+                <select id="timeField" class="form-control">
+                  <option value="">...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
           <fieldset class="px-3">
               <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
               <!-- A Stripe card element will go here -->
@@ -63,5 +149,5 @@
   {{ block.super }}
   {{ stripe_public_key|json_script:"id_stripe_public_key" }}
   {{ client_secret|json_script:"id_client_secret" }}
-  <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+  <script src="{% static 'bookings/js/stripe_elements.js' %}"></script>
 {% endblock %}
