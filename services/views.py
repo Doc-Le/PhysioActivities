@@ -1,18 +1,13 @@
 from django.shortcuts import render
 
-import services
-from .models import services
-
-# Create your views here.
-
+from django.http import JsonResponse, HttpResponse
+from .models import Service
 
 def all_services(request):
     """ A view to show all services, including sorting and search queries """
+    services = Service.objects.all()
 
-    services = Services.objects.all()
+    return JsonResponse({
+        'data': services
+    })
 
-    context = {
-        'services': services,
-    }
-
-    return render(request, 'services/services.html', context)
