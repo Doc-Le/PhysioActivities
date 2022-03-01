@@ -2,11 +2,7 @@ import uuid
 
 from django.db import models
 from django.db.models import Sum
-from django.conf import settings
-
-from appointment.models import Service
-
-
+from services.models import Clinician, Service
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -42,19 +38,19 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
-
-class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+class Booking(models.Model):
+    datetime = models.DateTimeField()
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='order')
     service = models.ForeignKey(Service, null=False, blank=False, on_delete=models.CASCADE)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-
+    clinician = models.ForeignKey(Clinician, null=False, blank=False, on_delete=models.CASCADE)
+    total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total
+        Override the original save method to set the booking total
         and update the order total.
         """
-        self.lineitem_total = self.services.price * self.quantity
+        self.total = self.service.price
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.services.sku} on order {self.order.order_number}'
+        return f'Service {self.service.name} on order {self.order.order_number}'
