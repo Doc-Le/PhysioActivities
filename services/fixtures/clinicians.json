@@ -3,24 +3,24 @@
     "pk": 1,
     "model": "services.clinician",
     "fields": {
-      "name": "Manual therapy",
-      "friendly_name": "Manual therapy"
+      "full_name": "Leandro De Araujo",
+      "gender": "Male"
     }
   },
   {
     "pk": 2,
     "model": "services.clinician",
     "fields": {
-      "name": "Dry Needling",
-      "friendly_name": "Dry Needling"
+      "full_name": "Glaucia De Araujo",
+      "gender": "Female"
     }
   },
   {
     "pk": 3,
     "model": "services.clinician",
     "fields": {
-      "name": "Shockwave therapy",
-      "friendly_name": "Shockwave therapy"
+      "full_name": "Mark Stuart",
+      "gender": "Male"
     }
   }
 ]
