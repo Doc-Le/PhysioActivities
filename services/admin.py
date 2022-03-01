@@ -1,28 +1,26 @@
 from django.contrib import admin
-
-import services
-from .models import clinicians, services
+from .models import Clinician, Service
 
 # Register your models here.
 
-
 class ServiceAdmin(admin.ModelAdmin):
     list_display = (
-        'sku',
         'name',
-        'category',
+        'description',
         'price'
     )
 
-    ordering = ('sku',)
+    ordering = ('name',)
 
 
 class ClinicianAdmin(admin.ModelAdmin):
     list_display = (
-        'friendly_name',
-        'name',
+        'full_name',
+        'gender',
     )
 
+    ordering = ('full_name',)
 
-admin.site.register(services, ServiceAdmin)
-admin.site.register(clinicians, ClinicianAdmin)
+
+admin.site.register(Service, ServiceAdmin)
+admin.site.register(Clinician, ClinicianAdmin)
