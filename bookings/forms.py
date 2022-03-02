@@ -1,14 +1,11 @@
 from django import forms
-from .models import Order
+from .models import Booking
 
-
-class OrderForm(forms.ModelForm):
+class BookingForm(forms.ModelForm):
     class Meta:
-        model = Order
-        fields = ('full_name', 'email', 'phone_number',
-                  'street_address1', 'street_address2',
-                  'town_or_city', 'postcode', 'country',
-                  'county',)
+        model = Booking
+        fields = ('service', 'clinician', 'datetime',
+                  'total',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -17,23 +14,20 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'full_name': 'Full Name',
-            'email': 'Email Address',
-            'phone_number': 'Phone Number',
-            'country': 'Country',
-            'postcode': 'Postal Code',
-            'town_or_city': 'Town or City',
-            'street_address1': 'Street Address 1',
-            'street_address2': 'Street Address 2',
-            'county': 'County',
+            'service': 'Select Service',
+            'clinician': 'Select Clinician',
+            'datetime': 'Select Date and Time',
+            'total': 'Total',
         }
 
-        self.fields['full_name'].widget.attrs['autofocus'] = True
+        self.fields['service'].widget.attrs['autofocus'] = True
+        self.fields['total'].widget.attrs['readonly'] = True
         for field in self.fields:
+            placeholder = placeholders[field]
             if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
+                label = f'{placeholder} *'
             else:
-                placeholder = placeholders[field]
+                label = placeholder
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False
+            self.fields[field].widget.attrs['class'] = 'form-control'
+            self.fields[field].label = label
