@@ -24,109 +24,29 @@
             <h2>Appointment</h2>
           </div>
           <div class="wow fadeInUp" data-wow-delay="0.8s">
+            {% csrf_token %}
+            {% for field in form %}
             <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label for="firstNameField">First Name</label>
-                <input type="text" id="firstNameField" class="form-control" placeholder="First Name" />
-              </div>
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                </div>
+                {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                {% endfor %}
             </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label for="lastNameField">Last Name</label>
-                <input type="text" id="lastNameField" class="form-control" placeholder="Last Name" />
-              </div>
-            </div>            
-            <div class="col-md-3 col-sm-6">
-              <div class="form-group">
-                <label for="genderField">Gender</label>
-                <select id="genderField" class="form-control">
-                  <option>None</option>
-                  <option>Female</option>
-                  <option>Male</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="form-group">
-                <label for="phoneField">Phone / Mobile No. </label>
-                <input type="text" id="phoneField" class="form-control" placeholder="Phone / Mobile  No." />
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label for="emailField">E-mail</label>
-                <input type="email" id="emailField" class="form-control" placeholder="E-mail" />
-              </div>
-            </div>            
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label for="locationField">Choose Location</label>
-                <select id="locationField" class="form-control">
-                  {% for location in locations %}
-                  <option value="{{ location.id }}">{{ location.name }}, {{ location.address }}, {{ location.city }}, {{ location.postcode }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label for="resourceField">Choose Clinician</label>
-                <select id="resourceField" class="form-control">
-                  <option value="">...</option>
-                  {% for resource in resources %}
-                  <option value="{{ resource.id }}">{{ resource.first_name }} {{ resource.last_name }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <label for="serviceField">Choose Service</label>
-                <select id="serviceField" class="form-control">
-                  <option value="">...</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">             
-              <div class="form-group">
-                <label for="dateField">Choose the date of your visit</label>
-                <select id="dateField" class="form-control">
-                  <option value="">...</option>
-                  {% for calendarDate in calendarDates %}
-                  <option value="{{ calendarDate.id }}">{{ calendarDate }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="form-group">
-                <label for="select">Choose the time</label>
-                <select id="timeField" class="form-control">
-                  <option value="">...</option>
-                </select>
-              </div>
-            </div>
+            {% endfor %}           
           </div>
         </div>
       </div>
-          <fieldset class="px-3">
-              <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-              <!-- A Stripe card element will go here -->
-              <div class="mb-3" id="card-element"></div>
+      <fieldset class="px-3">
+          <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+          <!-- A Stripe card element will go here -->
+          <div class="mb-3" id="card-element"></div>
 
-              <!-- Used to display form errors -->
-              <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-          </fieldset>  
-          <div class="form-check form-check-inline float-right mr-0">
-            {% if user.is_authenticated %}
-                <!-- <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked> -->
-            {% else %}
-                <!-- <label class="form-check-label" for="id-save-info">
-                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                </label> -->
-            {% endif %}
-          </div>  
+          <!-- Used to display form errors -->
+          <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+      </fieldset>  
     <div class="row">
       <div class="col-md-12">
         <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
