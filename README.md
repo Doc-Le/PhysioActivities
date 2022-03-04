@@ -70,7 +70,7 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 ## Current features 
 
--   Responsive on all device sizes  [Click here!](https://github.com/Doc-Le/PhysioActivities/blob/main/static/responsive/responsivepa.png)
+-   Responsive on all device sizes  [Click here!](https://github.com/Doc-Le/PhysioActivities/blob/main/static/responsive/responsivepa.pdf)
 
 -   Accessible. 
 
