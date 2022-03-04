@@ -13,60 +13,61 @@ Demo - See live: https://physioactivities.herokuapp.com
 
 This idea originally came up at first as I've been working in the field for 19 years. I understand the importance to have a website that can provide information about who is providing the treatment, and also the independence to make a booking and payment. 
 
-#
-## Wireframe
-
-
-| Page | Desktop | Tablet | Mobile |
-| ---- | ------- | ------ | ------ |
-|Home|[view](https://github)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_tablet.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_mobile_.png)|
-|About us|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signin_form.pngg)|[view](https://doc-le.github.io/Project-Milestone-1/assets/wireframe/tablet/projects.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signformtablet.png)|
-|Meet the Team|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/logged-in.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin_mobile_1.png)|
-|Services|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_tablet_.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_results_mobile_1_1.png)|
-|Contact|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Login/Logout|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Sign-up|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Make an appointment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Payment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
 
 #
 ## User Experience (UX)
 
+
+### Strategy 
+   - User goals 
+     * As a user I want to be able to find a physiotherapy services.
+     * As a user I want an attractive easy to use site.
+     * As a user I want to be able to find a physiotherapist and book a appointment.
+
 ### User stories
 
+- #### Unregistered Visitor
+        1. As an unregistered visitor, I want to be able search services
+        2. As an unregistered visitor, I want to be able to get to know the clinical core.
+        3. As an unregistered visitor, I want to be able connect to diverse social media.
+        4. As an unregistered visitor, I expect the site to look good on my mobile device.
+        
 
-#### First Time Visitor Goals
-
-* As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about what the clinic and the clinician have to offer.
-* As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-* As a First Time Visitor, I want to look for information to understand what each treatment technique has to offer. 
-* As a First Time Visitor, I  also want to locate his social media links to see their followings on social media to determine how trusted and known the company is.
-* As a First Time Visitor, I want to easily schedule an appointment and pay. 
-
-
-
-### Returning Visitor Goals
-
-
-* As a Returning Visitor, I want to find information about what the clinic has to offer.
-* As a Returning Visitor, I want to find information about what kind of service is provided.
-* As a Returning Visitor, I want to find information and reviews about the clinicians.
-* As a Returning Visitor, I want to find information about the type of techniques.
-* As a Returning Visitor, I want to find easy access for bookings and payments.
+- #### First Time Visitor Goals
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about what the clinic and the clinician have to offer.
+        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+        3. As a First Time Visitor, I want to look for information to understand what each treatment technique has to offer. 
+        4. As a First Time Visitor, I  also want to locate his social media links to see their followings on social media to determine how trusted and known the company is.
+        5. As a First Time Visitor, I want to easily schedule an appointment and pay. 
 
 
-## Goals
+
+- #### Registered Returning Visitor Goals
+        1. As a Returning Visitor, I want to be able to login easily.
+        2. As a Returning Visitor, I want to be able to change my password.
+        3. As a Returning Visitor, I want to find information and reviews about the clinicians.
+        4. As a Returning Visitor, I want to find information about the type of techniques.
+        5. As a Returning Visitor, I want to find easy access for bookings and payments.
+        6. As a frequent visitor, I don't want to have never ending scrolling up or down.
 
 
- * Create a user-friendly, well-designed website easily understood 
- * Create a registration form that stores information about users in a database in an organized fashion. 
- * Create a login system so that the user has to log in to make an appointment. 
- * Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them  and see if the chosen clinician has   availability. 
- * Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
- * Have information about the location of the physiotherapist. 
- * Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
+- #### Overall Goal
+        1. Create a user-friendly, well-designed website easily understood 
+        2. Create a registration form that stores information about users in a database in an organized fashion. 
+        3. Create a login system so that the user has to log in to make an appointment. 
+        4. Make an appointment form so that the user can submit information about their injury as well as a day and time that suits them  and see if the chosen clinician has   availability. 
+        5. Create links to social networking sites so the user can find out more about the physiotherapist or write a good review on their page e.g.(Google, Twitter, Facebook) 
+        6. Have information about the location of the physiotherapist. 
+        7. Information about the different types of services the physio offers so that the customer can decide if the physio actually does that service before contacting.
 
 
+- #### Admin goals
+        1. As admin, I want to be able to book, delete or edit a appointment.
+        2. As admin, I want to be able to choose the date and time for the appointment.
+        3. As admin, I want to be able to delete or edit an appointment
+        4. As admin, I want to be able to delete a user.
+        5. As admin, I want to be able to make another user an admin.
+        
 
 ## Current features 
 
@@ -101,7 +102,23 @@ This idea originally came up at first as I've been working in the field for 19 y
 - Would like to add patients reviews.
 
 
+#
+## Wireframe
 
+
+| Page | Desktop | Tablet | Mobile |
+| ---- | ------- | ------ | ------ |
+|Home|[view](https://github)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_tablet.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_mobile_.png)|
+|About us|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signin_form.pngg)|[view](https://doc-le.github.io/Project-Milestone-1/assets/wireframe/tablet/projects.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signformtablet.png)|
+|Meet the Team|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/logged-in.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin_mobile_1.png)|
+|Services|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_tablet_.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_results_mobile_1_1.png)|
+|Contact|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Login/Logout|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Sign-up|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Make an appointment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Payment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+
+#
 ## Design 
 
   * Color Scheme
@@ -117,7 +134,7 @@ This idea originally came up at first as I've been working in the field for 19 y
     Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
 
-
+#
 ## Tech used
 
 
