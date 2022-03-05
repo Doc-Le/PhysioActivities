@@ -19,6 +19,8 @@ def index(request):
 
 
 def login_form(request):
+    show_signup = request.GET.get('show_signup', 'false')
+    next = request.GET.get('next', None)
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -26,13 +28,15 @@ def login_form(request):
         if user is not None:
             login(request, user)
             # Redirect to a success page.
-            return HttpResponseRedirect('/')
+            if next is None:
+                return HttpResponseRedirect('/')
+            else:
+                return HttpResponseRedirect(next)            
         else:
             # Return an 'invalid login' error message.
             messages.warning(request, "Login Error !! Username or Password is incorrect")
             return HttpResponseRedirect('/login')
-    
-    context = {}
+    context = { 'show_signup': show_signup, 'next': next }
     return render(request, 'login_form.html', context)
 
 
@@ -41,6 +45,7 @@ def logout_func(request):
     return HttpResponseRedirect('/')
 
 def signup_form(request):
+    next = request.GET.get('next', None)
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -55,10 +60,17 @@ def signup_form(request):
             data.user_id = current_user.id
             data.save()
             messages.success(request, 'Your account has been created!')
-            return HttpResponseRedirect('/')
+            if next is not None:
+                return HttpResponseRedirect('/')
+            else:
+                return HttpResponseRedirect(next)
         else:
             messages.warning(request, form.errors)
-            return HttpResponseRedirect('/signup')
+            messages.warning(request, form.errors)
+            if next is not None:
+                return HttpResponseRedirect('/signup?next=' + next)
+            else:
+                return HttpResponseRedirect('/signup')
 
     form = SignUpForm()
     context = {
