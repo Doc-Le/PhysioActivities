@@ -7,9 +7,8 @@ from django.conf import settings
 
 from .forms import BookingForm
 
-
 @login_required(login_url='/login?show_signup=true')
-def bookings(request):
+def bookings(request):    
     # Booking = request.session.get('booking', {})
     # if not Booking:
     #     messages.error(request, "There is no appoiment schedules")
