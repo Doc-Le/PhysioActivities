@@ -9,7 +9,7 @@ class Booking(models.Model):
     user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
     service = models.ForeignKey(Service, null=False, blank=False, on_delete=models.CASCADE)
     clinician = models.ForeignKey(Clinician, null=False, blank=False, on_delete=models.CASCADE)
-    #  date time field:
+    # find out how to exclude from date time field:
     #  > weekends
     #  > time from 00:00 to 09:00 and 18:00 to 23:00
     #  > time > minute 00 and 30 
