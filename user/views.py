@@ -17,7 +17,6 @@ def index(request):
     context = {'profile': profile}
     return render(request, 'user_profile.html', context)
 
-
 def login_form(request):
     show_signup = request.GET.get('show_signup', 'false')
     next = request.GET.get('next', None)
@@ -38,7 +37,6 @@ def login_form(request):
             return HttpResponseRedirect('/login')
     context = { 'show_signup': show_signup, 'next': next }
     return render(request, 'login_form.html', context)
-
 
 def logout_func(request):
     logout(request)
@@ -61,9 +59,9 @@ def signup_form(request):
             data.save()
             messages.success(request, 'Your account has been created!')
             if next is not None:
-                return HttpResponseRedirect('/')
-            else:
                 return HttpResponseRedirect(next)
+            else:
+                return HttpResponseRedirect('/')
         else:
             messages.warning(request, form.errors)
             messages.warning(request, form.errors)
@@ -77,7 +75,6 @@ def signup_form(request):
         'form': form,
     }
     return render(request, 'signup_form.html', context)
-
 
 @login_required(login_url='/login')
 def user_update(request):
@@ -97,7 +94,6 @@ def user_update(request):
             'profile_form': profile_form
         }
         return render(request, 'user_update.html', context)
-
 
 @login_required(login_url='/login')
 def user_password(request):
