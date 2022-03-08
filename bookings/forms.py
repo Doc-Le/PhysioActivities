@@ -1,11 +1,19 @@
+from tkinter import Label
 from django import forms
+from django.db.models import Q
+
+from services.models import Service
 from .models import Booking
 
 class BookingForm(forms.ModelForm):
+    service = forms.ChoiceField(choices=[], label="Service *", required=True)
+    clinician = forms.ChoiceField(choices=[], label="Clinician *", required=True)
+    date = forms.ChoiceField(choices=[], label="Date *", required=True)
+    time = forms.ChoiceField(choices=[], label="Time *", required=True)
+    
     class Meta:
         model = Booking
-        fields = ('service', 'clinician', 'datetime',
-                  'total',)
+        fields = ('service', 'clinician', 'date', 'time',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -13,21 +21,16 @@ class BookingForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
+
         placeholders = {
-            'service': 'Select Service',
-            'clinician': 'Select Clinician',
-            'datetime': 'Select Date and Time',
-            'total': 'Total',
+            'service': 'Choose Service ...',
+            'clinician': 'Choose Clinician ...',
+            'date': 'Choose Appointment Date ...',
+            'time': 'Choose Appointment Time ...',
         }
 
         self.fields['service'].widget.attrs['autofocus'] = True
-        self.fields['total'].widget.attrs['readonly'] = True
+
         for field in self.fields:
-            placeholder = placeholders[field]
-            if self.fields[field].required:
-                label = f'{placeholder} *'
-            else:
-                label = placeholder
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['placeholder'] = placeholders[field]
             self.fields[field].widget.attrs['class'] = 'form-control'
-            self.fields[field].label = label
