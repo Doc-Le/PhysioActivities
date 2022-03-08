@@ -1,0 +1,20 @@
+Hello {{ Booking.user.user_name() }}!
+
+This is a confirmation of your appointment at Physio Activities. Your appointment information is below:
+
+Appointment Number: {{ Booking.booking_number }}
+Date: {{ Booking.date }} {{ Booking.time }}
+
+Service: ${{ Booking.service }}
+Clinician: ${{ Booking.clinician }}
+Cost: ${{ Booking.total }}
+
+We've got your phone number on file as {{ Booking.user.phone }}.
+
+If you have any questions, feel free to contact us at (01) 48124365.
+
+Thank you for booking an appointment with us!
+
+Sincerely,
+
+Physio Activities
