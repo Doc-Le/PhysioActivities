@@ -24,4 +24,4 @@ class Service(models.Model):
         return self.name
 
     def get_display_price(self):
-        return "{0:.2f}".format(self.price / 100)
+        return "{0:.2f}".format(self.price)
