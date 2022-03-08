@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block extra_css %}
-
+  <link rel="stylesheet" href="{% static 'bookings/css/index.css' %}" />
 {% endblock %}
 
 {% block menu_links %}
-     <li><a href="../" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
+  <li><a href="../" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
 {% endblock %}
  
 {% block page_header %}
@@ -17,7 +17,7 @@
 <!-- Bookings -->
 <section id="wizard" data-stellar-background-ratio="3">
   <div class="container">
-    <form id="appointment-form">
+    <form id="booking-form">
       <div class="row">
         <div class="col-md-12">
           <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
@@ -25,6 +25,18 @@
           </div>
           <div class="wow fadeInUp" data-wow-delay="0.8s">
             {% csrf_token %}
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                  <label for="first_name">First Name</label>
+                  <label id="first_name" class="form-control">{{ user.first_name }}</label>
+              </div>            
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                  <label for="first_name">Last Name</label>
+                  <label id="first_name" class="form-control">{{ user.last_name }}</label>
+              </div>            
+            </div>                       
             {% for field in form %}
             <div class="col-md-6 col-sm-6">
                 <div class="form-group">
@@ -35,7 +47,13 @@
                     <p style="color: red">{{ error }}</p>
                 {% endfor %}
             </div>
-            {% endfor %}           
+            {% endfor %}
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                  <label for="total">Total to Pay</label>
+                  <div id="total" class="form-control">€ 0.00</div>
+              </div>            
+            </div>                                   
           </div>
         </div>
       </div>
@@ -69,5 +87,6 @@
   {{ block.super }}
   {{ stripe_public_key|json_script:"id_stripe_public_key" }}
   {{ client_secret|json_script:"id_client_secret" }}
+  <script src="{% static 'bookings/js/index.js' %}"></script>
   <script src="{% static 'bookings/js/stripe_elements.js' %}"></script>
 {% endblock %}
