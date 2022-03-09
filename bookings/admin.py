@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking, BookingDate, BookingTime
+from .models import Booking
 
 
 class BookingAdmin(admin.TabularInline):
@@ -13,16 +13,4 @@ class BookingAdmin(admin.TabularInline):
 
     ordering = ('-datetime',)
 
-class BookingDateAdmin(admin.TabularInline):
-    model = BookingDate
-    fields = ('date',)
-    ordering = ('-date',)
-
-class BookingTimeAdmin(admin.TabularInline):
-    model = BookingTime
-    fields = ('time',)
-    ordering = ('-time',)
-
 admin.site.register(Booking)
-admin.site.register(BookingDate)
-admin.site.register(BookingTime)
