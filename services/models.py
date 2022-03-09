@@ -25,3 +25,15 @@ class Service(models.Model):
 
     def get_display_price(self):
         return "{0:.2f}".format(self.price)
+
+class ServiceDate(models.Model):
+    date = models.DateField(auto_now=False, auto_now_add=False)
+
+    def __str__(self):
+        return self.date.strftime("%d/%m/%Y")
+
+class ServiceTime(models.Model):
+    time = models.TimeField()
+   
+    def __str__(self):
+        return self.time.strftime("%H:%M")
