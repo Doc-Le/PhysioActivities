@@ -1,9 +1,50 @@
-from django.shortcuts import render
+from datetime import datetime
 
+from django.contrib import messages
+from django.db.models import Q
 from django.http import JsonResponse
-from .models import Service
+from django.shortcuts import redirect, render
 
-SESSION_KEY = 'services'
+from bookings.models import Booking
+from .forms import ServiceForm
+from .models import Service, ServiceDate, ServiceTime
+
+def services(request):
+    bag = request.session.get('bag', {})
+    if request.method == 'POST':
+        post_data = {
+            'service': request.POST['service'],
+            'clinician': request.POST['clinician'],
+            'date': request.POST['date'],
+            'time': request.POST['time']
+        }
+
+        form = ServiceForm(bag)
+        if form.is_valid():
+            service = Service.objects.get(id=post_data.service)
+            bag = {
+                'service': post_data.service,
+                'clinician': post_data.clinician,
+                'date': post_data.date,
+                'time': post_data.time,
+                'total': service.price,
+            }
+            request.session['bag'] = bag
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect('/bookings')
+        else:
+            messages.error(request, ('There was an error with your form. '
+                                     'Please double check your information.'))
+    else: 
+        form = ServiceForm(bag)
+
+    template = 'services/services.html'
+    context = {
+        'form': form,
+        'client_secret': 'test client secret',
+    }
+
+    return render(request, template, context)
 
 def all_services(request):
     """ Get all services, including sorting and search queries """
@@ -46,4 +87,56 @@ def get_clinicians_json(clinicians):
             'gender': clinician.gender
         })
     
+    return data
+
+def get_dates(request):
+    dates = get_available_dates()
+    
+    return JsonResponse({
+        'data': dates
+    })
+
+def get_times(request, date_id: int):
+    times = get_available_times(date_id)
+    
+    return JsonResponse({
+        'data': times
+    })
+
+def has_time_available(date_id: int, time_id: int):
+    date = ServiceDate.objects.get(id=date_id)
+    time = ServiceTime.objects.get(id=time_id)
+    any = Booking.objects.filter(date=date,time=time).count()
+    if any > 0:
+        return False
+    else:
+        return True
+
+def get_available_times(date_id: int):
+    serviceTimes = ServiceTime.objects.all()
+    data = []
+    if date_id is None:
+        return data
+        
+    for time in serviceTimes:
+        if has_time_available(date_id, time.id):
+            data.append({
+                'id': time.id,
+                'time': str(time)
+            })
+
+    return data
+
+def get_available_dates():
+    now = datetime.now()
+    serviceDates = ServiceDate.objects.filter(Q(date__gt=now.date()))
+    data = []
+    for date in serviceDates:
+        any = get_available_times(date.id)
+        if len(any) > 0:
+            data.append({
+                'id': date.id,
+                'date': str(date)
+            })
+
     return data
