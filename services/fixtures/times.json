@@ -1,0 +1,114 @@
+[
+    {
+        "pk": 1,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "09:00:00"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "09:30:00"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "10:00:00"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "10:30:00"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "11:00:00"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "11:30:00"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "12:00:00"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "12:30:00"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "14:00:00"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "14:30:00"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "15:00:00"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "15:30:00"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "16:00:00"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "16:30:00"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "17:00:00"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "services.servicetime",
+        "fields": {
+            "time": "17:30:00"
+        }
+    }
+]
