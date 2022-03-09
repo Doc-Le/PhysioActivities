@@ -17,48 +17,47 @@
 <!-- Bookings -->
 <section id="wizard" data-stellar-background-ratio="3">
   <div class="container">
-    <form id="booking-form">
+    <form>
       <div class="row">
         <div class="col-md-12">
           <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-            <h2>Appointment</h2>
+            <h2>Payment</h2>
           </div>
           <div class="wow fadeInUp" data-wow-delay="0.8s">
             {% csrf_token %}
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-12">
               <div class="form-group">
-                  <label for="first_name">First Name</label>
-                  <label id="first_name" class="form-control">{{ user.first_name }}</label>
+                  <label for="full_name">Patient Fullname</label>
+                  <label id="full_name" class="form-control">{{ user.full_name }}</label>
               </div>            
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-12">
               <div class="form-group">
-                  <label for="first_name">Last Name</label>
-                  <label id="first_name" class="form-control">{{ user.last_name }}</label>
+                  <label for="service">Service</label>
+                  <label id="service" class="form-control">{{ bag.service }}</label>
               </div>            
-            </div>                       
-            {% for field in form %}
-            <div class="col-md-6 col-sm-6">
-                <div class="form-group">
-                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                    {{ field }}
-                </div>
-                {% for error in field.errors %}
-                    <p style="color: red">{{ error }}</p>
-                {% endfor %}
+            </div> 
+            <div class="col-md-12">
+              <div class="form-group">
+                  <label for="clinician">Clinician</label>
+                  <label id="clinician" class="form-control">{{ bag.clinician }}</label>
+              </div>            
+            </div> 
+            <div class="col-md-12">
+              <div class="form-group">
+                  <label for="datetime">Appointment Date & Time</label>
+                  <label id="datetime" class="form-control">{{ bag.datetime }}</label>
+              </div>            
+            </div>                                                      
+            <div class="col-md-12">
+              <div class="form-group">
+                  <label for="total">Total</label>
+                  <label id="total" class="form-control">€ {{ bag.total }}</label>
+              </div>            
             </div>
-            {% endfor %}
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                  <label for="total">Total to Pay</label>
-                  <div id="total" class="form-control">€ 0.00</div>
-              </div>            
-            </div>                                   
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="form-group">
       <fieldset class="px-3">
           <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
           <!-- A Stripe card element will go here -->
@@ -66,32 +65,18 @@
 
           <!-- Used to display form errors -->
           <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-      </fieldset>
-    </div>  
-  </div>  
-  <div class="row">
-    <div class="col-md-12">
-      <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
-        <div class="col-md-6 col-sm-6">
-          <a href="../" role="button" class="btn btn-default btn-back">
-            <i></i>&nbsp;&nbsp;Complete Payment
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
-          <div class="col-md-6 col-sm-6">
-            <a href="../" role="button" class="btn btn-default btn-back">
-              <i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
-            </a>
+      </fieldset>  
+      <div class="row">
+        <div class="col-md-12">
+          <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
+            <div class="col-md-6 col-sm-6">
+              <a href="../services" role="button" class="btn btn-default btn-back">
+                <i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    {% csrf_token %}
   </form>
 </div>
 </section>
@@ -102,6 +87,5 @@
   {{ block.super }}
   {{ stripe_public_key|json_script:"id_stripe_public_key" }}
   {{ client_secret|json_script:"id_client_secret" }}
-  <script src="{% static 'bookings/js/index.js' %}"></script>
   <script src="{% static 'bookings/js/stripe_elements.js' %}"></script>
 {% endblock %}
