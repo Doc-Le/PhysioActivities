@@ -1,27 +1,87 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+{% endblock %}
+
+{% block menu_links %}
+  <li><a href="../" class="smoothScroll"><i class="fa fa-home"></i> Go Back</a></li>
+{% endblock %}
+ 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The new collections are here
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+
+<!-- Services -->
+<section id="wizard" data-stellar-background-ratio="3">
+  <div class="container">
+    <form id="services-form">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                <h2>Appointment Information</h2>
+                </div>
+                <div class="wow fadeInUp" data-wow-delay="0.8s">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label for="total">Total</label>
+                        <div id="total" class="form-control">€ 0.00</div>
+                    </div>            
+                </div>                                   
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+          <fieldset class="px-3">
+              <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+              <!-- A Stripe card element will go here -->
+              <div class="mb-3" id="card-element"></div>
+    
+              <!-- Used to display form errors -->
+              <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+          </fieldset>
+        </div>  
+      </div>  
+      <div class="form-group">
+        <div class="col-md-12">
+          <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
+            <div class="col-md-6 col-sm-6 ">
+                <button type="submit" id="services-button" class="btn btn-primary pull-right">Complete Payment</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wizard-buttons wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="col-md-12 col-sm-12">
+                        <a href="../" role="button" class="btn btn-default btn-back">
+                        <i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </form>
+</div>
+</section>
+
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script src="{% static 'services/js/index.js' %}"></script>
 {% endblock %}
