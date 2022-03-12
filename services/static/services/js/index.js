@@ -8,6 +8,11 @@ const $bookingButton = $('#booking-button');
 $clinicianField.prop('disabled', true);
 $timeField.prop('disabled', true);
 
+function loadingSelectOptions($element) {
+    $element.prop('disabled', true);
+    cleanUpSelectOptions($element, 'Loading ...');
+}
+
 function cleanUpSelectOptions($element, placeholder) {
     $element.find('option').remove().end().append(`<option value="">${placeholder}</option>`);
 }
@@ -34,15 +39,16 @@ async function getService(id) {
 
 function loadServices() {
     const placeholder = $serviceField.attr('placeholder');
-    cleanUpSelectOptions($serviceField, placeholder);
+    loadingSelectOptions($serviceField);
     getServices().then(data => {
+        cleanUpSelectOptions($serviceField, placeholder);
         data.forEach(service => {
             $serviceField.append(`<option value="${service.id}"> &euro; ${service.price} - ${service.name}</option>`);
         });
+        $serviceField.prop('disabled', false);
     })
     .catch((error) => {
         cleanUpSelectOptions($serviceField, placeholder);
-        $serviceField.prop('disabled', true);
         console.error("Error:", error);
     });
 }
@@ -51,9 +57,10 @@ function serviceSelectChange() {
     const service_id = $serviceField.val();
     const placeholder = $clinicianField.attr('placeholder');
     if (service_id) {
-        cleanUpSelectOptions($clinicianField, placeholder);
+        loadingSelectOptions($clinicianField);
         getService(service_id)
             .then(service => {
+                cleanUpSelectOptions($clinicianField, placeholder);
                 $totalField.text(`€ ${service.price}`);
                 service.clinicians.forEach(clinician => {
                     $clinicianField.append(`<option value="${clinician.id}">${clinician.full_name}</option>`);
@@ -63,7 +70,6 @@ function serviceSelectChange() {
             .catch((error) => {
                 $totalField.text('€ 0.00');
                 cleanUpSelectOptions($clinicianField, placeholder);
-                $clinicianField.prop('disabled', true);
                 console.error("Error:", error);
             });
     } else {
@@ -95,9 +101,11 @@ async function getTimes(id) {
 
 function loadDates() {
     const placeholder = $dateField.attr('placeholder');
-    cleanUpSelectOptions($dateField, placeholder);
+    loadingSelectOptions($dateField);
     getDates()
         .then(data => {
+            $dateField.prop('disabled', false);
+            cleanUpSelectOptions($dateField, placeholder);
             data.forEach(date => {
                 $dateField.append(`<option value="${date.id}">${date.date}</option>`);
             });
@@ -113,9 +121,10 @@ function dateSelectChange() {
     const placeholder = $timeField.attr('placeholder');
     cleanUpSelectOptions($timeField, placeholder);
     if (date_id) {
-        cleanUpSelectOptions($timeField, placeholder);
+        loadingSelectOptions($timeField);
         getTimes(date_id)
             .then(data => {
+                cleanUpSelectOptions($timeField, placeholder);
                 data.forEach(time => {
                     $timeField.append(`<option value="${time.id}">${time.time} h</option>`);
                 });
@@ -123,7 +132,6 @@ function dateSelectChange() {
             })
             .catch(function (error) {
                 cleanUpSelectOptions($timeField, placeholder);
-                $timeField.prop('disabled', true);
                 console.error("Error:", error);
             });
     } else {
