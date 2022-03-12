@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Clinician(models.Model):
     full_name = models.CharField(max_length=100)
     gender = models.CharField(max_length=10)
@@ -37,3 +36,9 @@ class ServiceTime(models.Model):
    
     def __str__(self):
         return self.time.strftime("%H:%M")
+
+class ServicePage(models.Model):
+    service = models.ForeignKey(Service, null=False, blank=False, on_delete=models.CASCADE)
+    clinician = models.ForeignKey(Clinician, null=False, blank=False, on_delete=models.CASCADE) 
+    date = models.ForeignKey(ServiceDate, null=False, blank=False, on_delete=models.CASCADE)
+    time = models.ForeignKey(ServiceTime, null=False, blank=False, on_delete=models.CASCADE)
