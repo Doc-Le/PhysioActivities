@@ -1,16 +1,15 @@
 
 from django import forms
-
-from .models import Service
+from .models import Service, Clinician, ServiceDate, ServicePage, ServiceTime
 
 class ServiceForm(forms.ModelForm):
-    service = forms.ChoiceField(choices=[], label="Service *", required=True)
-    clinician = forms.ChoiceField(choices=[], label="Clinician *", required=True)
-    date = forms.ChoiceField(choices=[], label="Date *", required=True)
-    time = forms.ChoiceField(choices=[], label="Time *", required=True)
+    service = forms.ModelChoiceField(queryset=Service.objects.all(), label="Service *", required=True)
+    clinician = forms.ModelChoiceField(queryset=Clinician.objects.all(), label="Clinician *", required=True)
+    date = forms.ModelChoiceField(queryset=ServiceDate.objects.all(), label="Date *", required=True)
+    time = forms.ModelChoiceField(queryset=ServiceTime.objects.all(), label="Time *", required=True)
     
     class Meta:
-        model = Service
+        model = ServicePage
         fields = ('service', 'clinician', 'date', 'time',)
 
     def __init__(self, *args, **kwargs):
