@@ -29,12 +29,12 @@ var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
 // Handle form submit
-var form = document.getElementById('payment-form');
+var form = document.getElementById('booking-form');
 
-form.addEventListener('submit', function(ev) {
+form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
-    $('#submit-button').attr('disabled', true);
+    $('#complete-payment-button').attr('disabled', true);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -49,7 +49,7 @@ form.addEventListener('submit', function(ev) {
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
             card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false);
+            $('#complete-payment-button').attr('disabled', false);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
