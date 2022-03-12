@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 
 from django.contrib import messages
 from django.db.models import Q
@@ -7,28 +8,28 @@ from django.shortcuts import redirect, render
 
 from bookings.models import Booking
 from .forms import ServiceForm
-from .models import Service, ServiceDate, ServiceTime
+from .models import Clinician, Service, ServiceDate, ServiceTime
 
 def services(request):
     bag = request.session.get('bag', {})
-    if request.method == 'POST':
-        post_data = {
-            'service': request.POST['service'],
-            'clinician': request.POST['clinician'],
-            'date': request.POST['date'],
-            'time': request.POST['time']
-        }
 
+    if request.method == 'POST':
+        bag = {
+            'service': int(request.POST['service']),
+            'clinician': int(request.POST['clinician']),
+            'date': int(request.POST['date']),
+            'time': int(request.POST['time'])
+        }
         form = ServiceForm(bag)
         if form.is_valid():
-            service = Service.objects.get(id=post_data.service)
-            bag = {
-                'service': post_data.service,
-                'clinician': post_data.clinician,
-                'date': post_data.date,
-                'time': post_data.time,
-                'total': service.price,
-            }
+            service = Service.objects.get(id=bag['service'])
+            clinician = Clinician.objects.get(id=bag['clinician'])
+            date = ServiceDate.objects.get(id=bag['date'])
+            time = ServiceTime.objects.get(id=bag['time'])
+            bag['service_name'] = service.name
+            bag['clinician_full_name'] = clinician.full_name
+            bag['datetime'] = str(date) + ', ' + str(time) + 'h'
+            bag['total'] = str(service.price)
             request.session['bag'] = bag
             request.session['save_info'] = 'save-info' in request.POST
             return redirect('/bookings')
