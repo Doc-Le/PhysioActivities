@@ -4,7 +4,7 @@ Demo - See live: https://physioactivities.herokuapp.com
 
 <div align="center">
   
-  ![PhysioAct](https://user-images.githubusercontent.com/76841050/155844125-75cb60e1-134e-4e2e-b2b9-59685902ee0c.gif)
+  ![PhysioAct ](https://user-images.githubusercontent.com/76841050/158079191-fcec5c97-4b58-4947-a9e2-07d156c715d9.gif)
   
 </div>
 
@@ -108,15 +108,17 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 | Page | Desktop | Tablet | Mobile |
 | ---- | ------- | ------ | ------ |
-|Home|[view](https://github)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_tablet.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/initial_mobile_.png)|
-|About us|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signin_form.pngg)|[view](https://doc-le.github.io/Project-Milestone-1/assets/wireframe/tablet/projects.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/signformtablet.png)|
-|Meet the Team|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/logged-in.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/loggedin_mobile_1.png)|
-|Services|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_tablet_.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_results_mobile_1_1.png)|
-|Contact|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Login/Logout|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Sign-up|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Make an appointment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
-|Payment|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_result.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/search_resultstablet_1.png)|[view](https://github.com/Doc-Le/Project-3-Moovies-Review/blob/main/wireframe/result_mobile_1_2.png)|
+|Home|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/2%20Home%20.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/1%20Ipad_%20home.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/1%20mobile%20Home%20.png)|
+|About us|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/1%20about%20us%20%20%20.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/2%20Ipad_%20about%20us.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/2%20mobileAbout%20us%20%20png)|
+|Meet the Team|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/3%20meet%20the%20team%20.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/3%20Ipad_%20our%20Team.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/3%20meet%20the%20team%20%20smartphone%20.png)|
+|Services|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/4%20service.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/5%20Ipad_%20services.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/4%20mobileService2%20%20%20%20.png)|
+|Contact|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/5%20contact%20us.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/4%20Ipad_%20contact.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/5%20mobilecontact%20%20.png)|
+|Login|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/6%20login.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/6%20Ipad_%20login%20form.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/6%20Login%20form%20%20smartphone.png)|
+|Sign-up|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/7%20signup%20form.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/7%20Ipad_%20sign%20up%20form.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/7%20mobile%20sing%20up%20form%20.png)|
+|Make an appointment|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/8%20Appointment.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/8%20Ipad_%20appointment.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/8%20mobileAppointment.png)|
+|Payment|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/9%20payment%20.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/9%20Ipad_%20payment%20.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/9%20Mobile%20payment.png)|
+|Payment success|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Desktop/10%20payment%20%20success.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/IPAD/10%20Ipad_%20payment%20%20success.png)|[view](https://github.com/Doc-Le/PhysioActivities/blob/main/static/wireframe/Mobile/10%20mobileAppointment%20success.png)|
+
 
 #
 ## Design 
@@ -285,11 +287,12 @@ $ python manage.py runserver
     
     - Create a SECRET_KEY for django to use. My settings.py file is set up to collect keys from the environment so name your variables accordingly. In github you go into settings from your dashboard and then variables. And add the following. You can complete the rest when you go through these sections. DEVELOPMENT value is set to True. Scope you can set to your repository name meaning its only accessible by that project or you can set it to */* meaning all your repositories can access them. 
 
-    - Ensure you have requirements.txt file and Procfile. These are required by Heroku so ensure these are pushed to github prior to deployment. Ensure all requirements are saved by using pip3 freeze > requirements.txt
+    - Ensure you have requirements.txt file and Procfile. These are required by Heroku so ensure these are pushed to github prior to deployment. Ensure all requirements are saved by using pip3 freeze >[requirements.txt](https://github.com/Doc-Le/PhysioActivities/blob/main/static/images/requirements.png)
 
     - If using in development you will need to Run migrations usimg command python3 manage.py makemigrations and then python3 manage.py migrate. To create a superuser in the terminal to get access to admin panel, use command python3 manage.py createsuperuser and fill in details required.
 
 - ### Setting up Stripe
+
     - Register with stripe [here](https://stripe.com/gb) if you don't already have an account. Didn't activate account as will be using free tier.
     - In dashboard from main menu and then select developers and then API keys. Here you will get the publishable and secret keys. These shouldn't go into version control so add them as variables in your github environment for development and in Config Vars in Heroku if you are deploying this project. 
         
@@ -299,6 +302,7 @@ $ python manage.py runserver
 
         
 - ### Heroku deployment
+
     - Log in to Heroku, click 'New' and select 'Create New App'. In window give the app a name and choose region closest to you and then click 'Create App'. Then in Resources under Add-ons, select Heroku Postgres.
     
     - Next select 'Deploy' from menu, three options of deployment are available. If you select Heroku Git, it gives you step by step of what you need to do.
@@ -309,8 +313,6 @@ $ python manage.py runserver
         
     - You will now need to migrate and create superuser as above in Setting Up Project section.
 
-
-
 #
 ## Content
 
@@ -319,8 +321,10 @@ $ python manage.py runserver
 #
 ## Media
 
-* Logo custom made by the developer with Adobe Illustrator
-* All images found [Image: wutzkoh / stock.adobe.com]
+  - Logo custom made by the developer with Adobe Illustrator
+  - All images found [Image: wutzkoh / stock.adobe.com]
+  - Gif toll [link](https://ezgif.com/)
+
 #
 ## Acknowledgements
 
