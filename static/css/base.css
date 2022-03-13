@@ -987,7 +987,7 @@ footer h4 {
    RESPONSIVE STYLES              
 -----------------------------------------*/
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-device-width: 1200px) {
   h1 {
     font-size: 4em;
   }
@@ -1017,7 +1017,7 @@ footer h4 {
   
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-device-width: 992px) {
   .slider .item {
     background-position: center;
   }
@@ -1035,7 +1035,7 @@ footer h4 {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-device-width: 767px) {
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: transparent;
   }
@@ -1078,7 +1078,7 @@ footer h4 {
   }
 }
 
-@media only screen and (max-width: 639px) {
+@media only screen and (max-device-width: 639px) {
   h1 {
     font-size: 3em;
     line-height: 1.2em;
@@ -1097,7 +1097,7 @@ footer h4 {
 
 }
 
-@media (min-width: 768px) {
+@media (min-device-width: 768px) {
   .navbar .navbar-default .navbar-header .navbar-brand {
     padding: 5px 15px 0;
   }  
