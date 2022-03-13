@@ -28,7 +28,7 @@
             <div class="col-md-12">
               <div class="form-group">
                   <label for="info-full_name">Patient name</label>
-                  <label id="info-full_name" class="form-control">{{ user.full_name }}</label>
+                  <label id="info-full_name" class="form-control">{{ user.get_full_name }}</label>
               </div>            
             </div>
             <div class="col-md-12">
@@ -76,7 +76,7 @@
               </a>
             </div>
             <div class="col-md-6 col-sm-6 ">
-              <a type="button" id="complete-payment-button" href="../" class="btn btn-primary pull-right">Complete Payment</a>
+              <button type="submit" id="complete-payment-button" class="btn btn-primary pull-right">Complete Payment</button>
             </div>
           </div>
         </div>
