@@ -21,8 +21,6 @@ def bookings(request):
     #stripe_secret_key = settings.STRIPE_SECRET_KEY
     user = request.user
 
-
-
     if request.method == 'POST':
         booking = Booking(bag)
         stripe_pid = request.POST.get('client_secret').split('_secret')[0]
@@ -53,6 +51,7 @@ def bookings(request):
 
     return render(request, template, context)
 
+
 @require_POST
 def cache_bookings_data(request):
     try:
@@ -73,28 +72,28 @@ def cache_bookings_data(request):
 
 
 def bookings_success(request, booking_number):
-     """
+    """
      Handle successful appointment
      """
-     save_info = request.session.get('save_info')
-     booking = get_object_or_404(Booking, booking_number=booking_number)
+    save_info = request.session.get('save_info')
+    booking = get_object_or_404(Booking, booking_number=booking_number)
 
-     if request.user.is_authenticated:
+    if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-          # Attach the user's profile to the booking
+        # Attach the user's profile to the booking
 #         # booking.user_profile = profile
 #         # booking.save()
 
-     messages.success(request, f'Appointment successfully processed! \
+        messages.success(request, f'Appointment successfully processed! \
          Your appointment number is {booking_number}. A confirmation \
          email will be sent to {booking.email}.')
 
-     if 'bag' in request.session:
+        if 'bag' in request.session:
          del request.session['bag']
 
-     template = 'bookings/bookings_success.html'
-     context = {
-       'booking': booking,
-    } 
+        template = 'bookings/bookings_success.html'
+        context = {
+            'booking': booking,
+        }
 
-     return render(request, template, context)
+        return render(request, template, context)

@@ -6,4 +6,3 @@ class BookingsConfig(AppConfig):
 
     def ready(self):
         import bookings
-        

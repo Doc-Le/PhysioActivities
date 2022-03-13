@@ -17,6 +17,7 @@ def index(request):
     context = {'profile': profile}
     return render(request, 'user_profile.html', context)
 
+
 def login_form(request):
     show_signup = request.GET.get('show_signup', 'false')
     next = request.GET.get('next', None)
@@ -30,17 +31,19 @@ def login_form(request):
             if next is None:
                 return HttpResponseRedirect('/')
             else:
-                return HttpResponseRedirect(next)            
+                return HttpResponseRedirect(next)
         else:
             # Return an 'invalid login' error message.
             messages.warning(request, "Login Error !! Username or Password is incorrect")
             return HttpResponseRedirect('/login')
-    context = { 'show_signup': show_signup, 'next': next }
+    context = {'show_signup': show_signup, 'next': next}
     return render(request, 'login_form.html', context)
+
 
 def logout_func(request):
     logout(request)
     return HttpResponseRedirect('/')
+
 
 def signup_form(request):
     next = request.GET.get('next', None)
@@ -76,6 +79,7 @@ def signup_form(request):
     }
     return render(request, 'signup_form.html', context)
 
+
 @login_required(login_url='/login')
 def user_update(request):
     if request.method == 'POST':
@@ -94,6 +98,7 @@ def user_update(request):
             'profile_form': profile_form
         }
         return render(request, 'user_update.html', context)
+
 
 @login_required(login_url='/login')
 def user_password(request):

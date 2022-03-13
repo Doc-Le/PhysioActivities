@@ -2,12 +2,13 @@
 from django import forms
 from .models import Service, Clinician, ServiceDate, ServicePage, ServiceTime
 
+
 class ServiceForm(forms.ModelForm):
     service = forms.ModelChoiceField(queryset=Service.objects.all(), label="Service *", required=True)
     clinician = forms.ModelChoiceField(queryset=Clinician.objects.all(), label="Clinician *", required=True)
     date = forms.ModelChoiceField(queryset=ServiceDate.objects.all(), label="Date *", required=True)
     time = forms.ModelChoiceField(queryset=ServiceTime.objects.all(), label="Time *", required=True)
-    
+
     class Meta:
         model = ServicePage
         fields = ('service', 'clinician', 'date', 'time',)

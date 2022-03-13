@@ -10,6 +10,7 @@ from bookings.models import Booking
 from .forms import ServiceForm
 from .models import Clinician, Service, ServiceDate, ServiceTime
 
+
 def services(request):
     bag = request.session.get('bag', {})
 
@@ -36,7 +37,7 @@ def services(request):
         else:
             messages.error(request, ('There was an error with your form. '
                                      'Please double check your information.'))
-    else: 
+    else:
         form = ServiceForm(bag)
 
     template = 'services/services.html'
@@ -46,6 +47,7 @@ def services(request):
     }
 
     return render(request, template, context)
+
 
 def all_services(request):
     """ Get all services, including sorting and search queries """
@@ -58,10 +60,10 @@ def all_services(request):
             'price': service.get_display_price()
         })
 
-
     return JsonResponse({
         'data': data
     })
+
 
 def get_service(request, service_id):
     service = Service.objects.get(id=service_id)
@@ -78,6 +80,7 @@ def get_service(request, service_id):
         'data': data
     })
 
+
 def get_clinicians_json(clinicians):
     data = []
     clinicians
@@ -87,38 +90,42 @@ def get_clinicians_json(clinicians):
             'full_name': clinician.full_name,
             'gender': clinician.gender
         })
-    
+
     return data
+
 
 def get_dates(request):
     dates = get_available_dates()
-    
+
     return JsonResponse({
         'data': dates
     })
 
+
 def get_times(request, date_id: int):
     times = get_available_times(date_id)
-    
+
     return JsonResponse({
         'data': times
     })
 
+
 def has_time_available(date_id: int, time_id: int):
     date = ServiceDate.objects.get(id=date_id)
     time = ServiceTime.objects.get(id=time_id)
-    any = Booking.objects.filter(date=date,time=time).count()
+    any = Booking.objects.filter(date=date, time=time).count()
     if any > 0:
         return False
     else:
         return True
+
 
 def get_available_times(date_id: int):
     serviceTimes = ServiceTime.objects.all()
     data = []
     if date_id is None:
         return data
-        
+
     for time in serviceTimes:
         if has_time_available(date_id, time.id):
             data.append({
@@ -127,6 +134,7 @@ def get_available_times(date_id: int):
             })
 
     return data
+
 
 def get_available_dates():
     now = datetime.now()

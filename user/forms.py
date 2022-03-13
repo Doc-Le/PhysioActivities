@@ -23,6 +23,7 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2',)
 
+
 class UserUpdateForm(UserChangeForm):
     class Meta:
         model = User
@@ -33,6 +34,7 @@ class UserUpdateForm(UserChangeForm):
             'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}),
             'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}),
         }
+
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from user.models import UserProfile
 
+
 def index(request):
     """ A view to return the index page """
     current_user = request.user
