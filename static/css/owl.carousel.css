@@ -16,8 +16,8 @@
   z-index: 1; }
   .owl-carousel .owl-stage {
     position: relative;
-    -ms-touch-action: pan-Y;
-    -moz-backface-visibility: hidden;
+    touch-action: pan-Y;
+    backface-visibility: hidden;
     /* fix firefox animation glitch */ }
   .owl-carousel .owl-stage:after {
     content: ".";
@@ -30,20 +30,20 @@
     position: relative;
     overflow: hidden;
     /* fix for flashing background */
-    -webkit-transform: translate3d(0px, 0px, 0px); }
+    transform: translate3d(0px, 0px, 0px); }
   .owl-carousel .owl-wrapper,
   .owl-carousel .owl-item {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0); }
+    backface-visibility: hidden;
+    backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
   .owl-carousel .owl-item {
     position: relative;
     min-height: 1px;
     float: left;
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; }
   .owl-carousel .owl-item img {
@@ -56,7 +56,6 @@
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
     cursor: pointer;
-    cursor: hand;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -145,7 +144,7 @@
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 100ms ease; }
 
 .owl-carousel .owl-video-play-icon:hover {
