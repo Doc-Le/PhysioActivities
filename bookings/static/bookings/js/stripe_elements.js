@@ -4,8 +4,6 @@
     CSS from here: 
     https://stripe.com/docs/stripe-js
 */
-
-
 var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
 var client_secret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripe_public_key);
@@ -50,10 +48,8 @@ form.addEventListener('submit', function (ev) {
             $(errorDiv).html(html);
             card.update({ 'disabled': false});
             $('#complete-payment-button').attr('disabled', false);
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
-            }
+        } else if (result.paymentIntent.status === 'succeeded') {
+            form.submit();
         }
     });
 });
