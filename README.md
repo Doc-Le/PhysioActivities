@@ -185,8 +185,23 @@ This idea originally came up at first as I've been working in the field for 19 y
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-W3C Markup Validator - Results (link)
-Testing User Stories from User Experience Section
+W3C CSS Validator - [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fphysioactivities.herokuapp.com%2F&profile=css3&usermedium=all&warning=no&vextwarning=true&lang=en)
+
+W3C  Know Errors;
+
+URI : https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+		Property pointer-events doesn't exist : none
+		Property pointer-events doesn't exist : none
+		Value Error : border-top solid\9 is not a color value : 4px solid\9
+		Value Error : border-bottom solid\9 is not a color value : 4px solid\9
+     	Property pointer-events doesn't exist : none
+		Deprecated media feature max-device-width. For guidance, see the Deprecated Media Features section in the current Media Queries specification.
+URI : https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+		Property text-rendering doesn't exist : auto
+URI : https://physioactivities.s3.amazonaws.com/static/css/owl.carousel.css
+		Value Error : cursor hand is not a cursor value : hand
+
+W3C Markup Validator - [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fphysioactivities.herokuapp.com%)
 
 
 ## Further Testing
