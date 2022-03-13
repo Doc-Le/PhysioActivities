@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.bookings, name='bookings'),
-    #path('cancel/', views.bookings(), name='cancel'),
-    #path('bookings_success/', views.bookings_success(), name='success'),
+    path('success/<booking_number>/', views.bookings_success, name='bookings_success'),
+    path('cache_bookings_data/', views.cache_bookings_data, name='cache_bookings_data'),
+    # path('wh/', webhook, name='webhook'),
 ]
