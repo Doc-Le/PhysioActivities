@@ -6,6 +6,8 @@ from django.http import JsonResponse, HttpResponse
 from django.urls import reverse
 from django.views.decorators.http import require_POST
 
+from user.models import UserProfile
+
 from .models import Booking
 
 import stripe
