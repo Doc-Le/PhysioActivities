@@ -6,5 +6,4 @@
 6.  No	Code base has significant code issues in console and front-end while performing user activities and API calls
 7.  No	Test procedures are missing from commit history or are not relevant to the SDLC
 8.  No	Data schema and relationships aren't clearly laid out in documentation
-		
-10. The README.md is absent or is missing basic information., Stripe functionality is not working. 
+9. The README.md is absent or is missing basic information., Stripe functionality is not working. 
