@@ -2,9 +2,11 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
-from django.http import JsonResponse, HttpResponse
+
+from django.http import HttpResponse
 from django.urls import reverse
 from django.views.decorators.http import require_POST
+from physioactivities.settings import STRIPE_SECRET_KEY
 
 from user.models import UserProfile
 
@@ -12,44 +14,6 @@ from .models import Booking
 
 import stripe
 import json
-
-
-@login_required(login_url='/login?show_signup=true')
-def bookings(request):
-    bag = request.session.get('bag', {})
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    #stripe_secret_key = settings.STRIPE_SECRET_KEY
-    user = request.user
-
-    if request.method == 'POST':
-        booking = Booking(bag)
-        stripe_pid = request.POST.get('client_secret').split('_secret')[0]
-
-        if stripe_pid is not None:
-            booking.stripe_pid = stripe_pid
-            booking.save()
-            # Save the info to the user's profile if all is well
-            request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('bookings_success',
-                                    args=[booking.booking_number]))
-        else:
-            messages.error(request, ('There was an error with your form. '
-                                     'Please double check your information.'))
-
-    if not stripe_public_key:
-        messages.warning(request, ('Stripe public key is missing. '
-                                   'Did you forget to set it in '
-                                   'your environment?'))
-
-    template = 'bookings/bookings.html'
-    context = {
-        'user': user,
-        'bag': bag,
-        'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
-        'client_secret': 'test client secret',
-    }
-
-    return render(request, template, context)
 
 
 @require_POST
@@ -69,6 +33,59 @@ def cache_bookings_data(request):
                                  'processed right now. Please try '
                                  'again later.'))
         return HttpResponse(content=e, status=400)
+
+
+@login_required(login_url='/login?show_signup=true')
+def bookings(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    
+
+    if request.method == 'POST':
+        user = request.user
+        bag = request.session.get('bag', {})
+        booking = Booking(bag)
+        stripe_pid = request.POST.get('client_secret').split('_secret')[0]
+
+        if stripe_pid is not None:
+            booking.stripe_pid = stripe_pid
+            booking.save()
+            # Save the info to the user's profile if all is well
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('bookings_success',
+                                    args=[booking.booking_number]))
+        else:
+            messages.error(request, ('There was an error with your form. '
+                                     'Please double check your information.'))
+
+    if not stripe_public_key:
+        messages.warning(request, ('Stripe public key is missing. '
+                                   'Did you forget to set it in '
+                                   'your environment?'))
+        
+    else:
+        bag = request.session.get('bag', {})
+     
+        
+        #current_bag = bag_contents(request)
+        total = bag['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = STRIPE_SECRET_KEY
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
+    
+            
+    template = 'bookings/bookings.html'
+    context = {
+        'user': user,
+        'bag': bag,
+        'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
+        'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
 
 
 def bookings_success(request, booking_number):
