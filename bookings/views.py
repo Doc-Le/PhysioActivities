@@ -9,8 +9,8 @@ from django.views.decorators.http import require_POST
 from physioactivities.settings import STRIPE_SECRET_KEY
 
 from user.models import UserProfile
-
 from .models import Booking
+from services.views import ServiceForm
 
 import stripe
 import json
@@ -66,8 +66,8 @@ def bookings(request):
         bag = request.session.get('bag', {})
      
         
-        #current_bag = bag_contents(request)
-        total = bag['grand_total']
+        ServiceForm = bag 
+        total = bag['total']
         stripe_total = round(total * 100)
         stripe.api_key = STRIPE_SECRET_KEY
         intent = stripe.PaymentIntent.create(
