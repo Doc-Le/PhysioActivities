@@ -20,7 +20,7 @@ import json
 def cache_bookings_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
-        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.api_key = STRIPE_SECRET_KEY
         bag = json.dumps(request.session.get('bag', {}))
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': bag,
@@ -66,8 +66,8 @@ def bookings(request):
         bag = request.session.get('bag', {})
      
         
-        ServiceForm = bag 
-        total = bag['total']
+        
+        total = float(bag['total'])
         stripe_total = round(total * 100)
         stripe.api_key = STRIPE_SECRET_KEY
         intent = stripe.PaymentIntent.create(
@@ -78,9 +78,9 @@ def bookings(request):
             
     template = 'bookings/bookings.html'
     context = {
-        'user': user,
+        #'user': user,
         'bag': bag,
-        'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
+        'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
 
