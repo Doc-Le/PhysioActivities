@@ -41,7 +41,6 @@ This idea originally came up at first as I've been working in the field for 19 y
         5. As a First Time Visitor, I want to easily schedule an appointment and pay. 
 
 
-
 - #### Registered Returning Visitor Goals
         1. As a Returning Visitor, I want to be able to login easily.
         2. As a Returning Visitor, I want to be able to change my password.
@@ -70,8 +69,6 @@ This idea originally came up at first as I've been working in the field for 19 y
         
 
 ## Current features 
-
--   Responsive on all device sizes  [Click here!](https://github.com/Doc-Le/PhysioActivities/blob/main/static/responsive/responsivepa.png)
 
 -   Accessible. 
 
@@ -167,44 +164,24 @@ This idea originally came up at first as I've been working in the field for 19 y
 7. [Stellar.js v0.6.2 ](http://markdalgleish.com/projects/stellar.js)
     
 8. [jQuery](https://jquery.com/)
-    - Required for some of the bootstrap elements such as collapsibles, modal and tooltips.
+    * Required for some of the bootstrap elements such as collapsibles, modal and tooltips.
 
-9.  [Owl Carousel v2.2.1] ( Copyright 2013-2017 David Deutsch)
+9. [Carousel v2.2.1](Copyright 2013-2017 David Deutsch)
     
 10. [SmoothScroll](Copyright 2013 http://DWUser.com)
 
-11. [WOW - v1.0.2 - 2014-10-28](Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT)
+11. [Wow- v1.0.2-2014-10-28](Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT)
 
 12. [Postgres](https://www.postgresql.org/)
-    - Database used for our data
+    * Database used for our data
 13. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
-    - Used to generate secret key
+    * Used to generate secret key
             
 #
-## Testing
-
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
-W3C CSS Validator - [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fphysioactivities.herokuapp.com%2F&profile=css3&usermedium=all&warning=no&vextwarning=true&lang=en)
-
-W3C  Know Errors;
-
-URI : https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
-		Property pointer-events doesn't exist : none
-		Property pointer-events doesn't exist : none
-		Value Error : border-top solid\9 is not a color value : 4px solid\9
-		Value Error : border-bottom solid\9 is not a color value : 4px solid\9
-     	Property pointer-events doesn't exist : none
-		Deprecated media feature max-device-width. For guidance, see the Deprecated Media Features section in the current Media Queries specification.
-URI : https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-		Property text-rendering doesn't exist : auto
-URI : https://physioactivities.s3.amazonaws.com/static/css/owl.carousel.css
-		Value Error : cursor hand is not a cursor value : hand
-
-W3C Markup Validator - [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fphysioactivities.herokuapp.com%)
+## Testing [here](#TESTING.md)
 
 
-## Further Testing
+### Further Testing
 
 This app was tested on Google Chrome, Microsoft Edge, and Safari browsers
 This app was viewed on a variety of devices such as Desktop, Laptop, IPhone7, IPhone8
