@@ -10,7 +10,6 @@ from physioactivities.settings import STRIPE_SECRET_KEY
 
 from user.models import UserProfile
 from .models import Booking
-from services.views import ServiceForm
 
 import stripe
 import json
@@ -41,13 +40,13 @@ def bookings(request):
     
 
     if request.method == 'POST':
-        user = request.user
+        #user = request.user
         bag = request.session.get('bag', {})
         booking = Booking(bag)
         stripe_pid = request.POST.get('client_secret').split('_secret')[0]
 
         if stripe_pid is not None:
-            booking.stripe_pid = stripe_pid
+            booking.stripe_pid = stripe_pid        
             booking.save()
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
@@ -98,8 +97,8 @@ def bookings_success(request, booking_number):
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the booking
-#         # booking.user_profile = profile
-#         # booking.save()
+        booking.user_profile = profile
+        booking.save()
 
         messages.success(request, f'Appointment successfully processed! \
          Your appointment number is {booking_number}. A confirmation \
