@@ -1,3 +1,4 @@
+from statistics import mode
 import uuid
 from datetime import datetime
 from django.db import models
@@ -22,9 +23,17 @@ class Booking(models.Model):
         """
         if not self.booking_number:
             self.booking_number = self._generate_booking_number()
-
-        self.datetime = datetime.combine(self.date, self.time)
-        self.total = self.service.price
+        
+        clinician_id=self.clinician
+        service_id=self.service
+        date_id=self.date
+        time_id=self.time
+        
+        self.clinician = Clinician.objects.get(id=clinician_id)
+        self.service = Service.objects.get(id=service_id)
+        self.date = ServiceDate.objects.get(id=date_id)
+        self.time = ServiceTime.objects.get(id=time_id)
+            
         super().save(*args, **kwargs)
 
     def _generate_booking_number(self):
