@@ -29,7 +29,7 @@ def services(request):
             time = ServiceTime.objects.get(id=bag['time'])
             bag['service_name'] = service.name
             bag['clinician_full_name'] = clinician.full_name
-            bag['datetime'] = str(date) + ', ' + str(time) + 'h'
+            bag['datetime'] = str(date) + ' ' + str(time) + 'h'
             bag['total'] = float(service.price)
             request.session['bag'] = bag
             request.session['save_info'] = 'save-info' in request.POST
