@@ -30,7 +30,7 @@ def services(request):
             bag['service_name'] = service.name
             bag['clinician_full_name'] = clinician.full_name
             bag['datetime'] = str(date) + ', ' + str(time) + 'h'
-            bag['total'] = str(service.price)
+            bag['total'] = float(service.price)
             request.session['bag'] = bag
             request.session['save_info'] = 'save-info' in request.POST
             return redirect('/bookings')
