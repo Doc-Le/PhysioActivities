@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -8,8 +9,9 @@ from django.urls import reverse
 from django.views.decorators.http import require_POST
 from physioactivities.settings import STRIPE_SECRET_KEY
 
-from user.models import UserProfile
 from .models import Booking
+from user.models import UserProfile
+from services.models import Clinician, Service, ServiceDate, ServiceTime
 
 import stripe
 import json
@@ -42,7 +44,16 @@ def bookings(request):
     if request.method == 'POST':
         #user = request.user
         bag = request.session.get('bag', {})
-        booking = Booking(bag)
+        
+        user = request.user
+        service = Service.objects.get(id=bag['service'])
+        clinician = Clinician.objects.get(id=bag['clinician'])
+        date = ServiceDate.objects.get(id=bag['date'])
+        time = ServiceTime.objects.get(id=bag['time'])
+        date_time = datetime.strptime(bag['datetime'][:-1], '%d/%m/%Y %H:%M')
+        total = float(bag['total'])
+        
+        booking = Booking(service=service, clinician=clinician, date=date, time=time, datetime=date_time, total=total, user=user)
         stripe_pid = request.POST.get('client_secret').split('_secret')[0]
 
         if stripe_pid is not None:
@@ -85,8 +96,6 @@ def bookings(request):
 
     return render(request, template, context)
 
-
-
 def bookings_success(request, booking_number):
     """
      Handle successful appointment
@@ -102,7 +111,7 @@ def bookings_success(request, booking_number):
 
         messages.success(request, f'Appointment successfully processed! \
          Your appointment number is {booking_number}. A confirmation \
-         email will be sent to {booking.email}.')
+         email will be sent to {profile.user.email}.')
 
         if 'bag' in request.session:
          del request.session['bag']
