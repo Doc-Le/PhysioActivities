@@ -2,16 +2,16 @@ from django.contrib import admin
 from .models import Booking
 
 
-class BookingAdmin(admin.TabularInline):
+class BookingAdmin(admin.ModelAdmin):
     model = Booking
 
     fields = ('user', 'service', 'clinician', 'date', 'time', 'total',)
 
     readonly_fields = ('datetime', 'total',)
 
-    list_display = ('datetime', 'user', 'service', 'clinician', 'total',)
+    list_display = ('datetime', 'booking_number', 'user', 'service', 'clinician', 'total',)
 
     ordering = ('-datetime',)
 
 
-admin.site.register(Booking)
+admin.site.register(Booking, BookingAdmin)
