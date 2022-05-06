@@ -157,7 +157,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_CURRENCY = 'EUR'
-STRIPE_WEBHOOK_SECRET = ""
+STRIPE_WEBHOOK_SECRET = os.environ.get('STRIPE_PUBLIC_KEY', '')
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(STATIC_URL, 'images')
