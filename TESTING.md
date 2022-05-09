@@ -33,20 +33,6 @@ The W3C Markup Validator and W3C CSS Validator were used to validate every page 
       ![pep8validation](https://user-images.githubusercontent.com/76841050/165843345-22f14619-d804-48bf-b779-873711b6ec15.png)
 
     
--   ## [Lighthouse testing in devtools](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
-       
-  
-     + Home.html (see report [here](app\static\tests\LHhome.png))
-
-       ![LHhome](https://user-images.githubusercontent.com/76841050/163257658-7e378204-899a-46e2-ba90-5c2e3616fac8.png)
-
-     + Login.html(see report [here](app\static\tests\Lhlogin.png))
-
-       ![Lhlogin](https://user-images.githubusercontent.com/76841050/163257661-3010e65f-e6bf-4f9e-99f8-20846ac2c8e8.png)
-     
-     + Logout.html(see report [here](app\static\tests\LHlogout.png)
-
-       ![LHlogout](https://user-images.githubusercontent.com/76841050/163257624-edc81ac2-b956-4a9c-ad18-46cb389382f3.png)
 
       
     
@@ -80,18 +66,11 @@ The W3C Markup Validator and W3C CSS Validator were used to validate every page 
          * Already a member, use the login function.<br>
          ![login](https://user-images.githubusercontent.com/76841050/165846104-cc5ff28f-2daf-4d22-881f-d4d2d3013c4d.png)
          * A simple way to  become a member by signing up.<br>
-         ![signup](https://user-images.githubusercontent.com/76841050/165846179-3e7b192f-6082-4d78-85ec-857da0ddf28c.pn)
+         ![signup](https://user-images.githubusercontent.com/76841050/165846179-3e7b192f-6082-4d78-85ec-857da0ddf28c.png)
          * Already logged in, you can logout anytime.<br>
          ![appointment](https://user-images.githubusercontent.com/76841050/165846244-bcdb2462-b1b6-449f-8234-8fbb6d07fde2.png)
-         
-
-      6. As a first time visitor, I want to easily search the movies.<br>
-         
-         
-         * The search bar is at the top or center of the home page, the user can use it to search for movie titles, actors, and actresses.<br>
-         ![searchmovie]()
-         * After clicking on the review button, user will be able to leave the review.<br>
-         ![thanksforreview]()
-         * Review function 
-         ![updatingreview]()
-         * No delete function needed, update your review.<br>
+         * Once you are logged in, you can find clincians, therapy type, date and time in the dropdown menu.<br>
+         ![payment](https://user-images.githubusercontent.com/76841050/167481883-97757bc1-2df0-4000-a7a7-429318c4ae85.png) 
+         * Once you are ready to make payment, get your creditcard details.<br>  
+          ![paymentconf](https://user-images.githubusercontent.com/76841050/167482108-32e3faae-fa6c-48f9-95e7-54436bf3abdd.png) 
+         * Done!, your appoitment is booked and a confirmation email has been sent to you.<br>  
