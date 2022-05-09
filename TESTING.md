@@ -5,7 +5,6 @@
       * [HTML validation](#w3c-markup-validator)
       * [CSS validation](#w3c-css-validator)
       * [Pep8 validation](#pep8-validation)
-      * [Lighthouse testing](#lighthouse-testing-in-devtools)
       * [Responsive](\static\responsive\responsivepa.png)
    - [Testing User Stories](#testing-user-stories)
    
@@ -72,5 +71,5 @@ The W3C Markup Validator and W3C CSS Validator were used to validate every page 
          * Once you are logged in, you can find clincians, therapy type, date and time in the dropdown menu.<br>
          ![payment](https://user-images.githubusercontent.com/76841050/167481883-97757bc1-2df0-4000-a7a7-429318c4ae85.png) 
          * Once you are ready to make payment, get your creditcard details.<br>  
-          ![paymentconf](https://user-images.githubusercontent.com/76841050/167482108-32e3faae-fa6c-48f9-95e7-54436bf3abdd.png) 
+         ![paymentconf](https://user-images.githubusercontent.com/76841050/167511228-62362da3-91f5-4038-848c-001ac80fe420.png)
          * Done!, your appoitment is booked and a confirmation email has been sent to you.<br>  
