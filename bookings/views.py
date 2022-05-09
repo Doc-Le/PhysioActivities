@@ -39,25 +39,25 @@ def cache_bookings_data(request):
 @login_required(login_url='/login?show_signup=true')
 def bookings(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    
 
     if request.method == 'POST':
-        #user = request.user
+        username = request.user.username
         bag = request.session.get('bag', {})
-        
-        user = request.user
+
+        user = UserProfile.objects.get(user__username=username)
         service = Service.objects.get(id=bag['service'])
         clinician = Clinician.objects.get(id=bag['clinician'])
         date = ServiceDate.objects.get(id=bag['date'])
         time = ServiceTime.objects.get(id=bag['time'])
         date_time = datetime.strptime(bag['datetime'][:-1], '%d/%m/%Y %H:%M')
         total = float(bag['total'])
-        
-        booking = Booking(service=service, clinician=clinician, date=date, time=time, datetime=date_time, total=total, user=user)
+
+        booking = Booking(service=service, clinician=clinician, date=date,
+                          time=time, datetime=date_time, total=total, user=user)
         stripe_pid = request.POST.get('client_secret').split('_secret')[0]
 
         if stripe_pid is not None:
-            booking.stripe_pid = stripe_pid        
+            booking.stripe_pid = stripe_pid
             booking.save()
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
@@ -71,12 +71,10 @@ def bookings(request):
         messages.warning(request, ('Stripe public key is missing. '
                                    'Did you forget to set it in '
                                    'your environment?'))
-        
+
     else:
         bag = request.session.get('bag', {})
-     
-        
-        
+
         total = float(bag['total'])
         stripe_total = round(total * 100)
         stripe.api_key = STRIPE_SECRET_KEY
@@ -84,17 +82,16 @@ def bookings(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-    
-            
+
     template = 'bookings/bookings.html'
     context = {
-        #'user': user,
         'bag': bag,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
+
 
 def bookings_success(request, booking_number):
     """
@@ -104,17 +101,17 @@ def bookings_success(request, booking_number):
     booking = get_object_or_404(Booking, booking_number=booking_number)
 
     if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
+        user = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the booking
-        booking.user_profile = profile
+        booking.user = UserProfile.objects.get(user=user)
         booking.save()
 
         messages.success(request, f'Appointment successfully processed! \
          Your appointment number is {booking_number}. A confirmation \
-         email will be sent to {profile.user.email}.')
+         email will be sent to {user.user.email}.')
 
         if 'bag' in request.session:
-         del request.session['bag']
+            del request.session['bag']
 
         template = 'bookings/bookings_success.html'
         context = {
