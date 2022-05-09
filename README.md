@@ -178,7 +178,9 @@ This idea originally came up at first as I've been working in the field for 19 y
     * Used to generate secret key
             
 #
-## Testing [here](#TESTING.md)
+## Testing 
+
+Testing and results can be found [here](TESTING.md)
 
 
 ### Further Testing
