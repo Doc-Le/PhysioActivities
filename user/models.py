@@ -10,4 +10,7 @@ class UserProfile(models.Model):
         return self.user.username
 
     def user_name(self):
-        return self.user.first_name + ' ' + self.user.last_name + ' [' + self.user.username + '] '
+        return self.fullname() + ' [' + self.user.username + '] '
+    
+    def fullname(self):
+        return self.user.first_name + ' ' + self.user.last_name
