@@ -308,9 +308,10 @@ $ python manage.py runserver
     - You will now need to migrate and create superuser as above in Setting Up Project section.
 
 #
-## Content
+## Content/Credits
 
 - Content was written by the developer
+- Credits to Boutique_ado development project, where I went through a million times to learn and understand Django + Stripe integration.
 
 #
 ## Media
