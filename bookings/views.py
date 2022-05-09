@@ -39,12 +39,18 @@ def cache_bookings_data(request):
 @login_required(login_url='/login?show_signup=true')
 def bookings(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    username = request.user.username
+    user = UserProfile.objects.get(user__username=username)
+
+    profile = {
+        'name': user.fullname(),
+        'email': user.user.email,
+        'phone': user.phone
+    }
 
     if request.method == 'POST':
-        username = request.user.username
         bag = request.session.get('bag', {})
 
-        user = UserProfile.objects.get(user__username=username)
         service = Service.objects.get(id=bag['service'])
         clinician = Clinician.objects.get(id=bag['clinician'])
         date = ServiceDate.objects.get(id=bag['date'])
@@ -84,8 +90,10 @@ def bookings(request):
         )
 
     template = 'bookings/bookings.html'
+
     context = {
         'bag': bag,
+        'profile': profile,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
@@ -97,24 +105,28 @@ def bookings_success(request, booking_number):
     """
      Handle successful appointment
      """
-    save_info = request.session.get('save_info')
+    bag = request.session.get('bag', {})
     booking = get_object_or_404(Booking, booking_number=booking_number)
-
     if request.user.is_authenticated:
-        user = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the booking
-        booking.user = UserProfile.objects.get(user=user)
-        booking.save()
-
-        messages.success(request, f'Appointment successfully processed! \
+        profile = UserProfile.objects.get(user=request.user)
+        # # Attach the user's profile to the booking
+        # booking.user = UserProfile.objects.get(user=user)
+        # booking.save()
+        success_message = f'Appointment successfully processed! \
          Your appointment number is {booking_number}. A confirmation \
-         email will be sent to {user.user.email}.')
+         email will be sent to {profile.user.email}.'
+        messages.success(request, success_message)
 
         if 'bag' in request.session:
             del request.session['bag']
 
+        if 'save_info' in request.session:
+            del request.session['save_info']
+
         template = 'bookings/bookings_success.html'
         context = {
+            'bag': bag,
+            'profile': profile,
             'booking': booking,
         }
 
