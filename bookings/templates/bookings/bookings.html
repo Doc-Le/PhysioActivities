@@ -28,7 +28,9 @@
             <div class="col-md-12">
               <div class="form-group">
                   <label for="info-full_name">Patient name</label>
-                  <label id="info-full_name" class="form-control">{{ user.get_full_name }}</label>
+                  <label id="info-full_name" class="form-control">{{ profile.name }}</label>
+                  <input type="hidden" value="{{ profile.email }}" name="info-email">
+                  <input type="hidden" value="{{ profile.phone }}" name="info-phone">
               </div>            
             </div>
             <div class="col-md-12">
@@ -83,8 +85,8 @@
           </div>
         </div>
       </div>
-  </form>
-</div>
+    </form>
+  </div>
 </section>
 
 {% endblock %}
