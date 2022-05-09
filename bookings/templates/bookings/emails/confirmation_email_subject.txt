@@ -1,1 +1,1 @@
-PhysioActivities Confirmation for Appointment Number {{ Booking.booking_number }}
+PhysioActivities Confirmation for Appointment Number {{ booking.booking_number }}
