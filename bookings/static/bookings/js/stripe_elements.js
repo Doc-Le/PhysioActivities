@@ -52,8 +52,8 @@ form.addEventListener("submit", function (ev) {
         card: card,
         billing_details: {
           name: $('#info-full_name').text(),
-          phone: $.trim(form.phone_number.value),
-          email: $.trim(form.email.value),
+          email: $('#info-email').val(),
+          phone:$('#info-phone').val()
         }
       },
     };
